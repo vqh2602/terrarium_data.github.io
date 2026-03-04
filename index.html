@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Ứng Dụng - Terrarium Data</title>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --secondary-color: #50e3c2;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --card-bg: #fff;
+            --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition-speed: 0.3s;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            width: 90%;
+            padding: 2rem;
+        }
+
+        h1 {
+            margin-bottom: 2rem;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .nav-button {
+            background-color: var(--card-bg);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            font-size: 1.2rem;
+            box-shadow: var(--card-shadow);
+            transition: all var(--transition-speed) ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary-color);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+            color: var(--primary-color);
+        }
+
+        .nav-button .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .nav-button {
+                padding: 1rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Terrarium Data Server</h1>
+        <div class="nav-grid">
+            <a href="schedule/" class="nav-button">
+                <span class="icon">📅</span>
+                <span>Lịch Công Tác</span>
+            </a>
+            <a href="terrarium/" class="nav-button">
+                <span class="icon">🌱</span>
+                <span>Terrarium</span>
+            </a>
+            <a href="trutien/" class="nav-button">
+                <span class="icon">📜</span>
+                <span>Tru Tiên</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
