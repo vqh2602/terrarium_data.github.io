@@ -1,0 +1,72 @@
+{
+  "cell_size": [
+    128,
+    128
+  ],
+  "rows": [
+    {
+      "name": "idle",
+      "row_index": 0,
+      "frame_count": 16,
+      "files": [
+        "nara_idle_1.png",
+        "nara_idle_2.png",
+        "nara_idle_3.png",
+        "nara_idle_4.png",
+        "nara_idle_5.png",
+        "nara_idle_6.png",
+        "nara_idle_7.png",
+        "nara_idle_8.png",
+        "nara_idle_9.png",
+        "nara_idle_10.png",
+        "nara_idle_11.png",
+        "nara_idle_12.png",
+        "nara_idle_13.png",
+        "nara_idle_14.png",
+        "nara_idle_15.png",
+        "nara_idle_16.png"
+      ]
+    },
+    {
+      "name": "attack",
+      "row_index": 1,
+      "frame_count": 9,
+      "files": [
+        "nara_attack_1.png",
+        "nara_attack_2.png",
+        "nara_attack_3.png",
+        "nara_attack_4.png",
+        "nara_attack_5.png",
+        "nara_attack_6.png",
+        "nara_attack_7.png",
+        "nara_attack_8.png",
+        "nara_attack_9.png"
+      ]
+    },
+    {
+      "name": "hit",
+      "row_index": 2,
+      "frame_count": 1,
+      "files": [
+        "nara_hit_1.png"
+      ]
+    },
+    {
+      "name": "base",
+      "row_index": 3,
+      "frame_count": 1,
+      "files": [
+        "NARA.png"
+      ]
+    },
+    {
+      "name": "other",
+      "row_index": 4,
+      "frame_count": 1,
+      "files": [
+        "NARA.png"
+      ]
+    }
+  ],
+  "source_zip": "PC _ Computer - Nexomon - Nexomon - 297 - Nara.zip"
+}

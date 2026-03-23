@@ -1,0 +1,72 @@
+{
+  "cell_size": [
+    128,
+    128
+  ],
+  "rows": [
+    {
+      "name": "idle",
+      "row_index": 0,
+      "frame_count": 16,
+      "files": [
+        "arqua_idle_1.png",
+        "arqua_idle_2.png",
+        "arqua_idle_3.png",
+        "arqua_idle_4.png",
+        "arqua_idle_5.png",
+        "arqua_idle_6.png",
+        "arqua_idle_7.png",
+        "arqua_idle_8.png",
+        "arqua_idle_9.png",
+        "arqua_idle_10.png",
+        "arqua_idle_11.png",
+        "arqua_idle_12.png",
+        "arqua_idle_13.png",
+        "arqua_idle_14.png",
+        "arqua_idle_15.png",
+        "arqua_idle_16.png"
+      ]
+    },
+    {
+      "name": "attack",
+      "row_index": 1,
+      "frame_count": 9,
+      "files": [
+        "arqua_attack_1.png",
+        "arqua_attack_2.png",
+        "arqua_attack_3.png",
+        "arqua_attack_4.png",
+        "arqua_attack_5.png",
+        "arqua_attack_6.png",
+        "arqua_attack_7.png",
+        "arqua_attack_8.png",
+        "arqua_attack_9.png"
+      ]
+    },
+    {
+      "name": "hit",
+      "row_index": 2,
+      "frame_count": 1,
+      "files": [
+        "arqua_hit_1.png"
+      ]
+    },
+    {
+      "name": "base",
+      "row_index": 3,
+      "frame_count": 1,
+      "files": [
+        "ARQUA.png"
+      ]
+    },
+    {
+      "name": "other",
+      "row_index": 4,
+      "frame_count": 1,
+      "files": [
+        "ARQUA.png"
+      ]
+    }
+  ],
+  "source_zip": "PC _ Computer - Nexomon - Nexomon - 301 - Arqua.zip"
+}

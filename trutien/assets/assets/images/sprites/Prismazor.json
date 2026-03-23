@@ -1,0 +1,69 @@
+{
+  "cell_size": [
+    128,
+    128
+  ],
+  "rows": [
+    {
+      "name": "idle",
+      "row_index": 0,
+      "frame_count": 13,
+      "files": [
+        "prismazor_idle_1.png",
+        "prismazor_idle_2.png",
+        "prismazor_idle_3.png",
+        "prismazor_idle_4.png",
+        "prismazor_idle_5.png",
+        "prismazor_idle_6.png",
+        "prismazor_idle_7.png",
+        "prismazor_idle_8.png",
+        "prismazor_idle_9.png",
+        "prismazor_idle_10.png",
+        "prismazor_idle_11.png",
+        "prismazor_idle_12.png",
+        "prismazor_idle_13.png"
+      ]
+    },
+    {
+      "name": "attack",
+      "row_index": 1,
+      "frame_count": 9,
+      "files": [
+        "prismazor_attack_1.png",
+        "prismazor_attack_2.png",
+        "prismazor_attack_3.png",
+        "prismazor_attack_4.png",
+        "prismazor_attack_5.png",
+        "prismazor_attack_6.png",
+        "prismazor_attack_7.png",
+        "prismazor_attack_8.png",
+        "prismazor_attack_9.png"
+      ]
+    },
+    {
+      "name": "hit",
+      "row_index": 2,
+      "frame_count": 1,
+      "files": [
+        "prismazor_hit_1.png"
+      ]
+    },
+    {
+      "name": "base",
+      "row_index": 3,
+      "frame_count": 1,
+      "files": [
+        "PRISMAZOR.png"
+      ]
+    },
+    {
+      "name": "other",
+      "row_index": 4,
+      "frame_count": 1,
+      "files": [
+        "PRISMAZOR.png"
+      ]
+    }
+  ],
+  "source_zip": "PC _ Computer - Nexomon - Nexomon - 273 - Prismazor.zip"
+}

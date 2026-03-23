@@ -1,0 +1,69 @@
+{
+  "cell_size": [
+    128,
+    128
+  ],
+  "rows": [
+    {
+      "name": "idle",
+      "row_index": 0,
+      "frame_count": 13,
+      "files": [
+        "fanfrou_idle_1.png",
+        "fanfrou_idle_2.png",
+        "fanfrou_idle_3.png",
+        "fanfrou_idle_4.png",
+        "fanfrou_idle_5.png",
+        "fanfrou_idle_6.png",
+        "fanfrou_idle_7.png",
+        "fanfrou_idle_8.png",
+        "fanfrou_idle_9.png",
+        "fanfrou_idle_10.png",
+        "fanfrou_idle_11.png",
+        "fanfrou_idle_12.png",
+        "fanfrou_idle_13.png"
+      ]
+    },
+    {
+      "name": "attack",
+      "row_index": 1,
+      "frame_count": 9,
+      "files": [
+        "fanfrou_attack_1.png",
+        "fanfrou_attack_2.png",
+        "fanfrou_attack_3.png",
+        "fanfrou_attack_4.png",
+        "fanfrou_attack_5.png",
+        "fanfrou_attack_6.png",
+        "fanfrou_attack_7.png",
+        "fanfrou_attack_8.png",
+        "fanfrou_attack_9.png"
+      ]
+    },
+    {
+      "name": "hit",
+      "row_index": 2,
+      "frame_count": 1,
+      "files": [
+        "fanfrou_hit_1.png"
+      ]
+    },
+    {
+      "name": "base",
+      "row_index": 3,
+      "frame_count": 1,
+      "files": [
+        "FANFROU.png"
+      ]
+    },
+    {
+      "name": "other",
+      "row_index": 4,
+      "frame_count": 1,
+      "files": [
+        "FANFROU.png"
+      ]
+    }
+  ],
+  "source_zip": "PC _ Computer - Nexomon - Nexomon - 023 - Fanfrou.zip"
+}
