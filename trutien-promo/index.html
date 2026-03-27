@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tru Tiên Mobile - Linh Sủng Chiến Thuật</title>
+    <style>
+        .xt-landing {
+            --bg: #08140f;
+            --bg-soft: #10231b;
+            --card: rgba(16, 35, 27, 0.82);
+            --line: rgba(255, 222, 145, 0.28);
+            --gold: #f3cf7a;
+            --gold-2: #ffefb8;
+            --green: #36d8b0;
+            --green-2: #78ffd9;
+            --text: #f8f5ea;
+            --muted: #c9d3cb;
+            --shadow: 0 18px 60px rgba(0,0,0,.38);
+            --maxw: 1180px;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(circle at top, rgba(80, 180, 130, .18), transparent 32%),
+                linear-gradient(180deg, #102118 0%, #08140f 100%);
+            color: var(--text);
+            line-height: 1.55;
+            min-height: 100vh;
+        }
+
+        .xt-landing * {
+            box-sizing: border-box;
+        }
+
+        .xt-landing img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .xt-landing a {
+            text-decoration: none;
+        }
+
+        .xt-wrap {
+            width: min(calc(100% - 32px), var(--maxw));
+            margin: 0 auto;
+        }
+
+        .xt-section {
+            padding: 72px 0;
+        }
+
+        .xt-hero {
+            position: relative;
+            overflow: hidden;
+            padding: 56px 0 36px;
+        }
+
+        .xt-hero:before,
+        .xt-hero:after {
+            content: "";
+            position: absolute;
+            border-radius: 999px;
+            filter: blur(50px);
+            pointer-events: none;
+        }
+
+        .xt-hero:before {
+            width: 260px;
+            height: 260px;
+            top: 20px;
+            left: -60px;
+            background: rgba(54, 216, 176, .18);
+        }
+
+        .xt-hero:after {
+            width: 320px;
+            height: 320px;
+            right: -80px;
+            top: 60px;
+            background: rgba(243, 207, 122, .14);
+        }
+
+        .xt-hero-grid {
+            display: grid;
+            grid-template-columns: 1.08fr .92fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .xt-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            border: 1px solid var(--line);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .05);
+            color: #fff4c8;
+            font-weight: 800;
+            letter-spacing: .4px;
+            box-shadow: var(--shadow);
+        }
+
+        .xt-title {
+            margin: 18px 0 14px;
+            font-size: clamp(34px, 6vw, 68px);
+            line-height: 1.02;
+            letter-spacing: -1px;
+            font-weight: 800;
+        }
+
+        .xt-title .accent {
+            display: block;
+            background: linear-gradient(90deg, #fff6cf, #ffd76b, #fff1b8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 18px rgba(0, 0, 0, .28);
+        }
+
+        .xt-sub {
+            max-width: 640px;
+            color: #eef7f2;
+            font-size: 18px;
+            text-shadow: 0 1px 10px rgba(0, 0, 0, .22);
+        }
+
+        .xt-cta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 28px;
+        }
+
+        .xt-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 52px;
+            padding: 0 22px;
+            border-radius: 999px;
+            font-weight: 800;
+            transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+        }
+
+        .xt-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .xt-btn-primary {
+            color: #102118;
+            background: linear-gradient(135deg, var(--gold-2), var(--gold));
+            box-shadow: 0 14px 32px rgba(243, 207, 122, .22);
+        }
+
+        .xt-btn-secondary {
+            color: #fff7dc;
+            border: 1px solid rgba(255, 255, 255, .14);
+            background: rgba(255, 255, 255, .07);
+        }
+
+        .xt-hero-card {
+            position: relative;
+            padding: 18px;
+            border: 1px solid var(--line);
+            border-radius: 28px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .03));
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+        }
+
+        .xt-hero-card:before {
+            content: "";
+            position: absolute;
+            inset: 8px;
+            border-radius: 22px;
+            border: 1px solid rgba(255, 255, 255, .06);
+            pointer-events: none;
+        }
+
+        .xt-phone-showcase {
+            display: grid;
+            grid-template-columns: .98fr .78fr;
+            gap: 14px;
+            align-items: end;
+        }
+
+        .xt-shot {
+            border-radius: 22px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, .12);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, .28);
+            background: #0e1c16;
+            aspect-ratio: 9 / 16;
+        }
+
+        .xt-shot img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .xt-shot.tall {
+            transform: rotate(-2deg);
+        }
+
+        .xt-shot.small {
+            transform: rotate(3deg);
+            margin-bottom: 28px;
+        }
+
+        .xt-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        .xt-stat {
+            padding: 16px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+            text-align: center;
+        }
+
+        .xt-stat b {
+            display: block;
+            font-size: 26px;
+            color: var(--gold-2);
+            margin-bottom: 6px;
+        }
+
+        .xt-title-row {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .xt-eyebrow {
+            color: #ffe7a3;
+            text-transform: uppercase;
+            letter-spacing: 1.8px;
+            font-size: 13px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .xt-h2 {
+            margin: 0;
+            font-size: clamp(28px, 4vw, 46px);
+            line-height: 1.08;
+            font-weight: 800;
+            color: #fff8ea;
+        }
+
+        .xt-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .xt-card {
+            padding: 22px;
+            border-radius: 24px;
+            border: 1px solid var(--line);
+            background: var(--card);
+            box-shadow: var(--shadow);
+        }
+
+        .xt-icon {
+            width: 56px;
+            height: 56px;
+            display: grid;
+            place-items: center;
+            border-radius: 18px;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, rgba(243, 207, 122, .22), rgba(54, 216, 176, .18));
+            font-size: 26px;
+        }
+
+        .xt-card h3 {
+            margin: 0 0 10px;
+            font-size: 22px;
+            color: #fff7de;
+        }
+
+        .xt-card p {
+            margin: 0;
+            color: #e7efe9;
+        }
+
+        .xt-pets-layout {
+            display: grid;
+            grid-template-columns: .95fr 1.05fr;
+            gap: 26px;
+            align-items: center;
+        }
+
+        .xt-pet-panel {
+            padding: 22px;
+            border-radius: 28px;
+            border: 1px solid var(--line);
+            background: linear-gradient(180deg, rgba(17, 37, 29, .92), rgba(9, 22, 17, .92));
+            box-shadow: var(--shadow);
+        }
+
+        .xt-pet-preview {
+            border-radius: 24px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, .1);
+            margin-bottom: 18px;
+            background: #0d1b15;
+            aspect-ratio: 9 / 16;
+        }
+
+        .xt-pet-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+        }
+
+        .xt-pet-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .xt-pet {
+            padding: 14px;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, .08);
+            background: rgba(255, 255, 255, .04);
+            text-align: center;
+        }
+
+        .xt-pet .emoji {
+            font-size: 34px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .xt-pet b {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--gold-2);
+        }
+
+        .xt-pet span {
+            color: #edf6f0;
+            font-size: 14px;
+        }
+
+        .xt-feature-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .xt-feature-item {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            padding: 16px 18px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .08);
+        }
+
+        .xt-dot {
+            flex: 0 0 36px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            color: #0c1813;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--gold-2), var(--green-2));
+        }
+
+        .xt-feature-item b {
+            display: block;
+            margin-bottom: 5px;
+            color: #fff7dc;
+        }
+
+        .xt-feature-item p {
+            margin: 0;
+            color: #edf6f0;
+        }
+
+        .xt-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .xt-gallery .xt-shot {
+            position: relative;
+        }
+
+        .xt-cap {
+            position: absolute;
+            left: 12px;
+            right: 12px;
+            bottom: 12px;
+            padding: 10px 12px;
+            border-radius: 14px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #fff8de;
+            background: rgba(7, 12, 10, .72);
+            border: 1px solid rgba(255, 255, 255, .16);
+            backdrop-filter: blur(8px);
+            text-shadow: 0 1px 8px rgba(0, 0, 0, .35);
+        }
+
+        .xt-cta-box {
+            padding: 30px;
+            border-radius: 28px;
+            border: 1px solid var(--line);
+            background:
+                radial-gradient(circle at left top, rgba(54, 216, 176, .16), transparent 35%),
+                radial-gradient(circle at right bottom, rgba(243, 207, 122, .12), transparent 30%),
+                linear-gradient(180deg, rgba(20, 43, 34, .92), rgba(9, 22, 17, .96));
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .xt-cta-box p {
+            max-width: 760px;
+            margin: 12px auto 0;
+            color: #eef7f2;
+        }
+
+        .xt-footer-note {
+            padding: 24px 0 48px;
+            text-align: center;
+            color: #d6dfd8;
+            font-size: 14px;
+        }
+
+        @media (max-width: 980px) {
+            .xt-hero-grid,
+            .xt-pets-layout,
+            .xt-cards,
+            .xt-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .xt-phone-showcase {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .xt-stats,
+            .xt-pet-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .xt-section {
+                padding: 56px 0;
+            }
+
+            .xt-hero {
+                padding-top: 30px;
+            }
+
+            .xt-wrap {
+                width: min(calc(100% - 20px), var(--maxw));
+            }
+
+            .xt-phone-showcase,
+            .xt-stats,
+            .xt-pet-grid,
+            .xt-cards,
+            .xt-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .xt-cta {
+                flex-direction: column;
+            }
+
+            .xt-btn {
+                width: 100%;
+            }
+
+            .xt-card,
+            .xt-pet-panel,
+            .xt-cta-box {
+                padding: 18px;
+            }
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Scroll Reveal Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Stagger delays for grid items */
+        .reveal-stagger:nth-child(1) { transition-delay: 0.1s; }
+        .reveal-stagger:nth-child(2) { transition-delay: 0.2s; }
+        .reveal-stagger:nth-child(3) { transition-delay: 0.3s; }
+    </style>
+</head>
+<body>
+    <div class="xt-landing">
+        <div class="xt-hero">
+            <div class="xt-wrap xt-hero-grid">
+                <div class="reveal-left">
+                    <div class="xt-badge">✨ MMORPG tu tiên • Linh sủng chiến thuật • Chơi miễn phí</div>
+                    <div class="xt-title">
+                        Tru Tiên xuất chiến,
+                        <span class="accent">linh sủng đồng hành bùng nổ sức mạnh</span>
+                    </div>
+                    <div class="xt-sub">
+                        Bước vào thế giới tu tiên huyền ảo, ghép ô chiến thuật, chiêu mộ linh sủng và bứt phá lực chiến qua từng trận đấu. Giao diện đẹp mắt, chơi cuốn, quà nhận đều mỗi ngày.
+                    </div>
+
+                    <div class="xt-cta">
+                        <a class="xt-btn xt-btn-primary" href="https://byvn.net/3YPR" target="_blank" rel="noopener noreferrer">Chơi trên web</a>
+                        <a class="xt-btn xt-btn-secondary" href="#linh-sung">Xem linh sủng</a>
+                    </div>
+
+                    <div class="xt-stats">
+                        <div class="xt-stat reveal-stagger"><b>85+</b><span>Linh sủng sưu tầm</span></div>
+                        <div class="xt-stat reveal-stagger"><b>Idle</b><span>Chơi rảnh tay, lên đồ nhanh</span></div>
+                        <div class="xt-stat reveal-stagger"><b>Free</b><span>Vào game miễn phí</span></div>
+                    </div>
+                </div>
+
+                <div class="xt-hero-card reveal-right">
+                    <div class="xt-phone-showcase">
+                        <div class="xt-shot tall">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmtbCTx3mTT3FvctjbCtm-cn1saopTvodm4c4gqWvzidKuoBs5GZF89lfOcz2vdpTltQzDZeMBeDq8FzsXNAWqoPyGXtfY0XEQQS6X_SVY90iqgNjCqCKn8E0W-QIMaMdJ5Ysa9PQyyXKtIFNetG5wVOM9IsaBHZQMZnk_APZ1NInUMuR29ZrGCjCNDXDB/s320/image123.png" alt="Gameplay ghép ô chiến đấu" />
+                        </div>
+                        <div class="xt-shot small">
+                            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQl0gU9NEKVl2qwCTpfLeMvaiRWSrhsoBxAPC2jKKbRCXtFLBBbkDG9ukhXLODi094pLG7VG_VMY64uVPdhxYLt9jjNN788S0h5su8i4ruY3s4waGuvHbjw9mVo0NCngNwP11sTEIxmaMkBmiIueqmpD4cWFFJuvkWz-Bavre_y1ICbyQ2Y0H40xl06WnK/s320/image122.png" alt="Màn hình linh sủng" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="xt-section">
+            <div class="xt-wrap">
+                <div class="xt-title-row reveal">
+                    <div class="xt-eyebrow">Điểm nổi bật</div>
+                    <div class="xt-h2">Ba điểm khiến trận chiến luôn cuốn mắt</div>
+                </div>
+
+                <div class="xt-cards">
+                    <div class="xt-card reveal reveal-stagger">
+                        <div class="xt-icon">⚔️</div>
+                        <h3>Ghép ô chiến thuật</h3>
+                        <p>Sắp xếp tài nguyên, kích hoạt kỹ năng và tối ưu từng lượt đi để tạo khác biệt trong mỗi trận đấu.</p>
+                    </div>
+                    <div class="xt-card reveal reveal-stagger">
+                        <div class="xt-icon">🐾</div>
+                        <h3>Linh sủng đa kỹ năng</h3>
+                        <p>Mỗi pet mang một hiệu ứng riêng về sát thương, vàng hoặc năng lượng, giúp đội hình biến hóa linh hoạt.</p>
+                    </div>
+                    <div class="xt-card reveal reveal-stagger">
+                        <div class="xt-icon">🎁</div>
+                        <h3>Thưởng và tăng tiến</h3>
+                        <p>Đăng nhập, nhận quà, mở sự kiện và tích lũy tài nguyên liên tục để gia tăng sức mạnh mỗi ngày.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="xt-section" id="linh-sung">
+            <div class="xt-wrap xt-pets-layout">
+                <div class="xt-pet-panel reveal-left">
+                    <div class="xt-pet-preview">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQl0gU9NEKVl2qwCTpfLeMvaiRWSrhsoBxAPC2jKKbRCXtFLBBbkDG9ukhXLODi094pLG7VG_VMY64uVPdhxYLt9jjNN788S0h5su8i4ruY3s4waGuvHbjw9mVo0NCngNwP11sTEIxmaMkBmiIueqmpD4cWFFJuvkWz-Bavre_y1ICbyQ2Y0H40xl06WnK/s320/image122.png" alt="Danh sách linh sủng trong game" />
+                    </div>
+                    <div class="xt-pet-grid">
+                        <div class="xt-pet">
+                            <span class="emoji">🐇</span>
+                            <b>Angalo</b>
+                            <span>Gia tăng vàng sau mỗi lượt thu thập</span>
+                        </div>
+                        <div class="xt-pet">
+                            <span class="emoji">🧚</span>
+                            <b>Algamaid</b>
+                            <span>Hỗ trợ năng lượng, tăng nhịp chiến đấu</span>
+                        </div>
+                        <div class="xt-pet">
+                            <span class="emoji">🐺</span>
+                            <b>Abaddog</b>
+                            <span>Cộng dồn sát thương theo nhịp tấn công</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="reveal-right">
+                    <div class="xt-eyebrow">Linh sủng</div>
+                    <div class="xt-h2">Đồng hành chiến đấu, nâng cấp đội hình theo phong cách riêng</div>
+                    <div class="xt-sub" style="max-width:none; margin-top:14px;">
+                        Từ pet hỗ trợ vàng, hồi năng lượng cho đến linh thú cường hóa sát thương, mỗi lựa chọn đều tạo ra một lối chơi riêng biệt và giúp hành trình tu tiên thêm cuốn hút.
+                    </div>
+
+                    <div class="xt-feature-list" style="margin-top:22px;">
+                        <div class="xt-feature-item reveal reveal-stagger">
+                            <div class="xt-dot">1</div>
+                            <div>
+                                <b>Kích hoạt sức mạnh riêng</b>
+                                <p>Linh sủng hỗ trợ trực tiếp cho lối chơi bằng các chỉ số tăng vàng, hồi năng lượng và cộng sát thương theo tình huống.</p>
+                            </div>
+                        </div>
+                        <div class="xt-feature-item reveal reveal-stagger">
+                            <div class="xt-dot">2</div>
+                            <div>
+                                <b>Tạo hình nổi bật</b>
+                                <p>Thiết kế pet sáng, rõ và có cá tính giúp bộ sưu tập luôn bắt mắt ngay từ lần xem đầu tiên.</p>
+                            </div>
+                        </div>
+                        <div class="xt-feature-item reveal reveal-stagger">
+                            <div class="xt-dot">3</div>
+                            <div>
+                                <b>Dễ chơi, dễ cuốn</b>
+                                <p>Nhịp chơi nhẹ nhàng nhưng vẫn có chiều sâu tăng tiến khiến người mới dễ nhập cuộc và chơi lâu hơn.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="xt-section">
+            <div class="xt-wrap">
+                <div class="xt-title-row reveal">
+                    <div class="xt-eyebrow">Ảnh ingame</div>
+                    <div class="xt-h2">Giao diện fantasy rực sáng, vào trận là thấy cuốn</div>
+                </div>
+
+                <div class="xt-gallery">
+                    <div class="xt-shot reveal reveal-stagger">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmtbCTx3mTT3FvctjbCtm-cn1saopTvodm4c4gqWvzidKuoBs5GZF89lfOcz2vdpTltQzDZeMBeDq8FzsXNAWqoPyGXtfY0XEQQS6X_SVY90iqgNjCqCKn8E0W-QIMaMdJ5Ysa9PQyyXKtIFNetG5wVOM9IsaBHZQMZnk_APZ1NInUMuR29ZrGCjCNDXDB/s320/image123.png" alt="Màn hình chính game" />
+                        <div class="xt-cap">Màn hình chính: chọn chế độ, đổi hệ, chuẩn bị đội hình</div>
+                    </div>
+                    <div class="xt-shot reveal reveal-stagger">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjmtbCTx3mTT3FvctjbCtm-cn1saopTvodm4c4gqWvzidKuoBs5GZF89lfOcz2vdpTltQzDZeMBeDq8FzsXNAWqoPyGXtfY0XEQQS6X_SVY90iqgNjCqCKn8E0W-QIMaMdJ5Ysa9PQyyXKtIFNetG5wVOM9IsaBHZQMZnk_APZ1NInUMuR29ZrGCjCNDXDB/s320/image123.png" alt="Bàn đấu ingame" />
+                        <div class="xt-cap">Battle board: ghép ô chiến thuật, tích tài nguyên, bùng nổ kỹ năng</div>
+                    </div>
+                    <div class="xt-shot reveal reveal-stagger">
+                        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiQl0gU9NEKVl2qwCTpfLeMvaiRWSrhsoBxAPC2jKKbRCXtFLBBbkDG9ukhXLODi094pLG7VG_VMY64uVPdhxYLt9jjNN788S0h5su8i4ruY3s4waGuvHbjw9mVo0NCngNwP11sTEIxmaMkBmiIueqmpD4cWFFJuvkWz-Bavre_y1ICbyQ2Y0H40xl06WnK/s320/image122.png" alt="Bộ sưu tập pet" />
+                        <div class="xt-cap">Bộ sưu tập pet: đa dạng tạo hình, rõ kỹ năng, dễ lựa chọn</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="xt-section">
+            <div class="xt-wrap">
+                <div class="xt-cta-box reveal">
+                    <div class="xt-eyebrow">Tải game ngay</div>
+                    <div class="xt-h2">Chọn nền tảng yêu thích và vào trận hôm nay</div>
+                    <p>Tải trên Android, iOS hoặc chơi trực tiếp trên web để bắt đầu hành trình tu tiên, chiêu mộ linh sủng và chinh phục đấu trường.</p>
+
+                    <div class="xt-cards" style="margin-top:24px;">
+                        <div class="xt-card reveal reveal-stagger" style="text-align:center;">
+                            <div class="xt-icon">🤖</div>
+                            <h3>Android</h3>
+                            <p><a style="color: #fff0b8; font-weight:700;" href="https://gofile.io/d/Y1UYhc" target="_blank" rel="noopener noreferrer">Tải cho Android</a></p>
+                        </div>
+                        <div class="xt-card reveal reveal-stagger" style="text-align:center;">
+                            <div class="xt-icon">🍎</div>
+                            <h3>iOS</h3>
+                            <p><a style="color: #fff0b8; font-weight:700;" href="https://testflight.apple.com/join/PvtB2auM" target="_blank" rel="noopener noreferrer">Tải cho iOS</a></p>
+                        </div>
+                        <div class="xt-card reveal reveal-stagger" style="text-align:center;">
+                            <div class="xt-icon">🌐</div>
+                            <h3>Web</h3>
+                            <p><a style="color: #fff0b8; font-weight:700;" href="https://byvn.net/3YPR" target="_blank" rel="noopener noreferrer">Chơi bản web</a></p>
+                        </div>
+                    </div>
+
+                    <div class="xt-cta" style="justify-content:center; margin-top:24px;">
+                        <a class="xt-btn xt-btn-primary reveal-stagger" href="https://gofile.io/d/Y1UYhc" target="_blank" rel="noopener noreferrer">Tải Android</a>
+                        <a class="xt-btn xt-btn-secondary reveal-stagger" href="https://testflight.apple.com/join/PvtB2auM" target="_blank" rel="noopener noreferrer">Tải iOS</a>
+                        <a class="xt-btn xt-btn-secondary reveal-stagger" href="https://byvn.net/3YPR" target="_blank" rel="noopener noreferrer">Chơi trên web</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="xt-wrap xt-footer-note">
+            © Tru Tiên Mobile • Linh sủng chiến thuật • Chơi miễn phí trên Android, iOS và Web.
+        </div>
+    </div>
+
+    <script>
+        // Scroll Reveal Animation Script
+        const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-stagger');
+        
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Once animated, we can stop observing this element
+                    // revealObserver.unobserve(entry.target); 
+                } else {
+                    // Optional: remove class when scrolling away
+                    // entry.target.classList.remove('active');
+                }
+            });
+        }, {
+            threshold: 0.15 // Trigger when 15% of element is visible
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+    </script>
+</body>
