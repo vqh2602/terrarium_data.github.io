@@ -1,0 +1,2731 @@
+{
+  "meta": {
+    "title": "Men Hairstyle Catalog up to 2026 - expanded global",
+    "description": "Catalog tóc nam mở rộng, bổ sung thêm nhiều kiểu Nhật, Trung, châu Âu, Mỹ, châu Phi. Giữ nguyên schema app-ready với hairLength, fade, fringe, parting, curlPattern.",
+    "version": "1.0",
+    "language": "vi",
+    "totalStyles": 60,
+    "schemaFields": [
+      "id",
+      "name",
+      "subtitle",
+      "summary",
+      "fitShapes",
+      "avoidShapes",
+      "textureFit",
+      "densityFit",
+      "maintenanceLevel",
+      "styleTags",
+      "contextTags",
+      "fitReason",
+      "avoidReason",
+      "visualCode",
+      "hairLength",
+      "fade",
+      "fringe",
+      "parting",
+      "curlPattern"
+    ],
+    "allowedFaceShapes": [
+      "oval",
+      "round",
+      "square",
+      "heart",
+      "long"
+    ],
+    "allowedTextures": [
+      "straight",
+      "wavy",
+      "curly",
+      "coily"
+    ],
+    "allowedDensity": [
+      "thin",
+      "normal",
+      "thick"
+    ],
+    "allowedMaintenanceLevels": [
+      "low",
+      "medium",
+      "high"
+    ],
+    "audience": "men",
+    "allowedHairLength": [
+      "short",
+      "medium",
+      "long"
+    ],
+    "allowedFade": [
+      "none",
+      "low",
+      "mid",
+      "high",
+      "taper",
+      "low_taper",
+      "temple",
+      "drop",
+      "burst",
+      "undercut"
+    ],
+    "allowedFringe": [
+      "none",
+      "short_forward",
+      "short_up",
+      "short_side",
+      "blunt_short",
+      "textured_forward",
+      "textured_up",
+      "curtain",
+      "comma",
+      "side_swept",
+      "quiff",
+      "slick_back",
+      "full",
+      "curly_forward",
+      "curly_top",
+      "flat_top",
+      "soft_forward"
+    ],
+    "allowedParting": [
+      "none",
+      "natural",
+      "middle",
+      "side",
+      "pulled_back"
+    ],
+    "allowedCurlPattern": [
+      "straight",
+      "wavy",
+      "curly",
+      "coily"
+    ],
+    "regionalStyleTags": [
+      "african",
+      "american",
+      "chinese",
+      "european",
+      "japanese"
+    ]
+  },
+  "styles": [
+    {
+      "id": "afro_skin_fade",
+      "name": "Afro Skin Fade",
+      "subtitle": "Khối tóc afro giữ ở trên với fade sát rất sạch hai bên",
+      "summary": "Tạo tương phản mạnh, hiện đại và tôn texture tự nhiên.",
+      "fitShapes": [
+        "round",
+        "oval",
+        "square"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "coily",
+        "curly"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "african",
+        "clean",
+        "natural"
+      ],
+      "contextTags": [
+        "office",
+        "casual",
+        "night"
+      ],
+      "fitReason": "Giữ độ cao ở đỉnh nhưng dọn sides sạch để mặt gọn và sắc hơn.",
+      "avoidReason": "Độ cao quá lớn sẽ không tối ưu cho mặt dài.",
+      "visualCode": "ASF",
+      "hairLength": "short",
+      "fade": "high",
+      "fringe": "none",
+      "parting": "none",
+      "curlPattern": [
+        "coily",
+        "curly"
+      ]
+    },
+    {
+      "id": "broccoli_cut",
+      "name": "Broccoli Cut",
+      "subtitle": "Đỉnh xoăn/phồng với hai bên gọn theo xu hướng Gen Z",
+      "summary": "Tạo volume tập trung ở trên, trẻ và khá nổi bật.",
+      "fitShapes": [
+        "round",
+        "oval"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "wavy",
+        "curly",
+        "coily"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "trend",
+        "youthful"
+      ],
+      "contextTags": [
+        "student",
+        "casual"
+      ],
+      "fitReason": "Đỉnh nở giúp mặt tròn có thêm chiều cao và sự năng động.",
+      "avoidReason": "Mặt dài có thể bị kéo thêm nếu phần trên quá nhiều volume.",
+      "visualCode": "BC",
+      "hairLength": "short",
+      "fade": "low_taper",
+      "fringe": "curly_forward",
+      "parting": "none",
+      "curlPattern": [
+        "wavy",
+        "curly",
+        "coily"
+      ]
+    },
+    {
+      "id": "american_brush_up",
+      "name": "Brush Up Mỹ",
+      "subtitle": "Tóc chải dựng tự nhiên, ít bóng hơn pompadour",
+      "summary": "Hiện đại, nam tính và rất phổ biến trong barber style Mỹ.",
+      "fitShapes": [
+        "round",
+        "square",
+        "oval"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "american",
+        "modern",
+        "clean"
+      ],
+      "contextTags": [
+        "casual",
+        "office",
+        "night"
+      ],
+      "fitReason": "Thêm chiều cao vừa phải để gương mặt gọn hơn.",
+      "avoidReason": "Nếu dựng quá cao có thể mất cân đối với mặt dài.",
+      "visualCode": "ABU",
+      "hairLength": "short",
+      "fade": "mid",
+      "fringe": "textured_up",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "american_burst_frohawk",
+      "name": "Burst Frohawk",
+      "subtitle": "Texture xoăn/coily tập trung dọc giữa với burst fade hai bên",
+      "summary": "Cá tính mạnh và rất hợp chất tóc tự nhiên dày.",
+      "fitShapes": [
+        "round",
+        "oval",
+        "square"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "curly",
+        "coily"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "high",
+      "styleTags": [
+        "american",
+        "bold",
+        "natural"
+      ],
+      "contextTags": [
+        "casual",
+        "night"
+      ],
+      "fitReason": "Đưa trọng tâm lên giữa đầu giúp mặt tròn gọn hơn và nổi bật texture.",
+      "avoidReason": "Chiều cao mạnh ở giữa đầu có thể làm mặt dài thêm.",
+      "visualCode": "BFR",
+      "hairLength": "short",
+      "fade": "burst",
+      "fringe": "curly_top",
+      "parting": "none",
+      "curlPattern": [
+        "curly",
+        "coily"
+      ]
+    },
+    {
+      "id": "buzz_cut",
+      "name": "Buzz Cut",
+      "subtitle": "Cắt cực ngắn đồng đều, tối giản tuyệt đối",
+      "summary": "Sạch, mạnh và làm nổi toàn bộ xương mặt.",
+      "fitShapes": [
+        "oval",
+        "square"
+      ],
+      "avoidShapes": [
+        "round",
+        "heart",
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy",
+        "curly",
+        "coily"
+      ],
+      "densityFit": [
+        "thin",
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "clean",
+        "bold",
+        "minimal"
+      ],
+      "contextTags": [
+        "office",
+        "casual"
+      ],
+      "fitReason": "Tôn đường xương mặt rõ và tạo cảm giác rất gọn.",
+      "avoidReason": "Hầu như không có khả năng che hay điều chỉnh tỷ lệ khuôn mặt.",
+      "visualCode": "BZ",
+      "hairLength": "short",
+      "fade": "none",
+      "fringe": "none",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy",
+        "curly",
+        "coily"
+      ]
+    },
+    {
+      "id": "caesar_cut",
+      "name": "Caesar Cut",
+      "subtitle": "Mái ngắn đưa ra trước với chiều dài đồng đều",
+      "summary": "Che trán nhẹ và tạo phom nam tính cổ điển.",
+      "fitShapes": [
+        "oval",
+        "long",
+        "heart"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy",
+        "curly"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "classic",
+        "clean"
+      ],
+      "contextTags": [
+        "office",
+        "casual"
+      ],
+      "fitReason": "Mái ngắn phía trước giúp hạ trán và cân mặt dài.",
+      "avoidReason": "Đường ngang trước có thể làm mặt tròn trông rộng hơn.",
+      "visualCode": "CZ",
+      "hairLength": "short",
+      "fade": "none",
+      "fringe": "blunt_short",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy",
+        "curly"
+      ]
+    },
+    {
+      "id": "south_african_chiskop",
+      "name": "Chiskop",
+      "subtitle": "Kiểu cắt cực ngắn phổ biến ở nhiều nơi tại châu Phi",
+      "summary": "Tối giản, gọn và rất thực dụng trong khí hậu nóng.",
+      "fitShapes": [
+        "oval",
+        "square"
+      ],
+      "avoidShapes": [
+        "round",
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy",
+        "curly",
+        "coily"
+      ],
+      "densityFit": [
+        "thin",
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "african",
+        "minimal",
+        "clean"
+      ],
+      "contextTags": [
+        "casual",
+        "office"
+      ],
+      "fitReason": "Cho cảm giác cực gọn, mạnh và ít phải chăm.",
+      "avoidReason": "Không có khả năng che hoặc điều chỉnh tỷ lệ mặt.",
+      "visualCode": "CHK",
+      "hairLength": "short",
+      "fade": "none",
+      "fringe": "none",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy",
+        "curly",
+        "coily"
+      ]
+    },
+    {
+      "id": "euro_classic_taper",
+      "name": "Classic Taper Âu",
+      "subtitle": "Phom cổ điển châu Âu với taper tinh tế và phần trên gọn",
+      "summary": "Lịch thiệp, timeless và hợp nhiều độ tuổi.",
+      "fitShapes": [
+        "oval",
+        "round",
+        "square",
+        "heart"
+      ],
+      "avoidShapes": [],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "thin",
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "european",
+        "classic",
+        "clean"
+      ],
+      "contextTags": [
+        "office",
+        "formal",
+        "casual"
+      ],
+      "fitReason": "Rất cân bằng về tỷ lệ và không quá cực đoan ở chiều cao hay bề ngang.",
+      "avoidReason": "Hiệu ứng chỉnh mặt vừa phải hơn các kiểu fade mạnh.",
+      "visualCode": "ECT",
+      "hairLength": "short",
+      "fade": "taper",
+      "fringe": "short_side",
+      "parting": "side",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "low_taper_coils",
+      "name": "Coils Taper Thấp",
+      "subtitle": "Giữ độ phồng tự nhiên với đường viền sạch",
+      "summary": "Giữ cá tính texture tự nhiên đồng thời làm gọn tổng thể khuôn mặt.",
+      "fitShapes": [
+        "oval",
+        "round",
+        "heart"
+      ],
+      "avoidShapes": [],
+      "textureFit": [
+        "curly",
+        "coily"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "clean",
+        "bold"
+      ],
+      "contextTags": [
+        "office",
+        "casual",
+        "night"
+      ],
+      "fitReason": "Độ phồng ở đỉnh giúp kéo dáng mặt mà vẫn giữ chất tóc tự nhiên.",
+      "avoidReason": "Cần chăm lại viền tóc để tổng thể luôn sắc nét.",
+      "visualCode": "LT",
+      "hairLength": "short",
+      "fade": "low_taper",
+      "fringe": "none",
+      "parting": "none",
+      "curlPattern": [
+        "curly",
+        "coily"
+      ]
+    },
+    {
+      "id": "crew_cut",
+      "name": "Crew Cut",
+      "subtitle": "Ngắn gọn với phần đỉnh dài hơn nhẹ so với hai bên",
+      "summary": "Một kiểu kinh điển, dễ quản lý và nam tính.",
+      "fitShapes": [
+        "oval",
+        "round",
+        "square"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "clean",
+        "classic"
+      ],
+      "contextTags": [
+        "office",
+        "casual"
+      ],
+      "fitReason": "Giúp mặt tròn gọn hơn nhờ chút chiều cao ở đỉnh.",
+      "avoidReason": "Mặt dài có thể bị kéo thêm nếu hai bên cắt quá sát.",
+      "visualCode": "CC",
+      "hairLength": "short",
+      "fade": "none",
+      "fringe": "short_up",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "textured_crop",
+      "name": "Crop Tạo Texture",
+      "subtitle": "Giữ texture ở đỉnh đầu với phần hai bên gọn",
+      "summary": "Kiểu cắt gọn, sắc và hợp với chất tóc dày cùng đường nét mặt rõ.",
+      "fitShapes": [
+        "oval",
+        "square"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "wavy",
+        "curly",
+        "coily"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "clean",
+        "bold"
+      ],
+      "contextTags": [
+        "office",
+        "casual"
+      ],
+      "fitReason": "Phần viền gọn giúp đường hàm rõ trông có chủ đích và nam tính hơn.",
+      "avoidReason": "Có thể làm gương mặt vốn đã dài trông càng dài hơn.",
+      "visualCode": "TC",
+      "hairLength": "short",
+      "fade": "low",
+      "fringe": "short_forward",
+      "parting": "none",
+      "curlPattern": [
+        "wavy",
+        "curly",
+        "coily"
+      ]
+    },
+    {
+      "id": "temple_fade_curls",
+      "name": "Curls Temple Fade",
+      "subtitle": "Xoăn tự nhiên giữ ở trên với fade gọn ở thái dương",
+      "summary": "Hiện đại, cân đối và rất phù hợp tóc xoăn nam.",
+      "fitShapes": [
+        "round",
+        "oval",
+        "square"
+      ],
+      "avoidShapes": [],
+      "textureFit": [
+        "curly",
+        "coily"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "clean",
+        "natural",
+        "modern"
+      ],
+      "contextTags": [
+        "office",
+        "casual",
+        "night"
+      ],
+      "fitReason": "Hai bên gọn làm khuôn mặt sắc hơn trong khi vẫn giữ texture mạnh ở trên.",
+      "avoidReason": "Cần duy trì fade đều để giữ phom.",
+      "visualCode": "TF",
+      "hairLength": "short",
+      "fade": "temple",
+      "fringe": "curly_top",
+      "parting": "none",
+      "curlPattern": [
+        "curly",
+        "coily"
+      ]
+    },
+    {
+      "id": "drop_fade",
+      "name": "Drop Fade",
+      "subtitle": "Fade hạ thấp phía sau tai để ôm đầu tự nhiên hơn",
+      "summary": "Một kỹ thuật fade linh hoạt, giúp đầu tròn và gọn hơn.",
+      "fitShapes": [
+        "round",
+        "square",
+        "oval"
+      ],
+      "avoidShapes": [],
+      "textureFit": [
+        "straight",
+        "wavy",
+        "curly",
+        "coily"
+      ],
+      "densityFit": [
+        "thin",
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "clean",
+        "modern"
+      ],
+      "contextTags": [
+        "office",
+        "casual"
+      ],
+      "fitReason": "Đường fade ôm theo dáng đầu giúp tổng thể cân hơn fade thẳng.",
+      "avoidReason": "Cần barber xử lý tốt để độ chuyển mượt.",
+      "visualCode": "DF",
+      "hairLength": "short",
+      "fade": "drop",
+      "fringe": "none",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy",
+        "curly",
+        "coily"
+      ]
+    },
+    {
+      "id": "flat_top",
+      "name": "Flat Top",
+      "subtitle": "Đỉnh cắt phẳng tạo hình học rất rõ",
+      "summary": "Kiểu tóc mạnh, cổ điển và mang tính biểu tượng.",
+      "fitShapes": [
+        "round",
+        "oval"
+      ],
+      "avoidShapes": [
+        "long",
+        "heart"
+      ],
+      "textureFit": [
+        "coily",
+        "curly",
+        "straight"
+      ],
+      "densityFit": [
+        "thick"
+      ],
+      "maintenanceLevel": "high",
+      "styleTags": [
+        "bold",
+        "retro"
+      ],
+      "contextTags": [
+        "casual",
+        "night"
+      ],
+      "fitReason": "Tạo chiều cao rất mạnh cho mặt tròn.",
+      "avoidReason": "Dễ làm vùng trên gương mặt trông quá cứng hoặc kéo mặt dài thêm.",
+      "visualCode": "FT",
+      "hairLength": "short",
+      "fade": "high",
+      "fringe": "flat_top",
+      "parting": "none",
+      "curlPattern": [
+        "coily",
+        "curly",
+        "straight"
+      ]
+    },
+    {
+      "id": "french_crop",
+      "name": "French Crop",
+      "subtitle": "Đỉnh có texture với mái ngắn đổ trước nhẹ",
+      "summary": "Hiện đại hơn Caesar và rất dễ kiểm soát.",
+      "fitShapes": [
+        "oval",
+        "square",
+        "long"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy",
+        "curly"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "clean",
+        "modern"
+      ],
+      "contextTags": [
+        "office",
+        "casual"
+      ],
+      "fitReason": "Texture phía trước làm mềm nét cứng và hỗ trợ che trán vừa phải.",
+      "avoidReason": "Mái ngang ngắn vẫn có thể làm mặt tròn nở hơn nếu quá dày.",
+      "visualCode": "FC",
+      "hairLength": "short",
+      "fade": "low",
+      "fringe": "textured_forward",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy",
+        "curly"
+      ]
+    },
+    {
+      "id": "french_textured_quiff",
+      "name": "French Quiff Texture",
+      "subtitle": "Quiff mềm với cảm hứng Parisian, ít bóng và tự nhiên",
+      "summary": "Thanh lịch hơn pompadour, hợp môi trường hiện đại.",
+      "fitShapes": [
+        "round",
+        "square",
+        "oval"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "thin",
+        "normal"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "european",
+        "soft",
+        "modern"
+      ],
+      "contextTags": [
+        "office",
+        "casual",
+        "night"
+      ],
+      "fitReason": "Cho chiều cao vừa phải mà không quá gắt hay bóng.",
+      "avoidReason": "Nếu phần trước quá cao sẽ không còn lợi cho mặt dài.",
+      "visualCode": "FTQ",
+      "hairLength": "short",
+      "fade": "low",
+      "fringe": "quiff",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "clean_hard_part",
+      "name": "Hard Part Sạch",
+      "subtitle": "Đường ngôi khắc rõ với form bên trên gọn lịch",
+      "summary": "Rất sắc, nam tính và hợp barber style Mỹ - Âu.",
+      "fitShapes": [
+        "round",
+        "oval",
+        "square"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "american",
+        "european",
+        "sharp"
+      ],
+      "contextTags": [
+        "office",
+        "night"
+      ],
+      "fitReason": "Tạo đường nét rõ giúp mặt gọn và tăng độ sắc sảo.",
+      "avoidReason": "Đường line quá rõ có thể trông cứng hoặc nghiêm quá mức.",
+      "visualCode": "HDP",
+      "hairLength": "short",
+      "fade": "mid",
+      "fringe": "side_swept",
+      "parting": "side",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "high_fade_textured",
+      "name": "High Fade + Texture",
+      "subtitle": "Fade cao với đỉnh tóc có độ rối chủ đích",
+      "summary": "Rõ, sắc và phù hợp người thích form mạnh.",
+      "fitShapes": [
+        "round",
+        "oval",
+        "square"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy",
+        "curly"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "bold",
+        "clean"
+      ],
+      "contextTags": [
+        "casual",
+        "night"
+      ],
+      "fitReason": "Hai bên rất gọn giúp mặt tròn gọn và đỉnh texture thêm chiều cao.",
+      "avoidReason": "Mặt dài hoặc gầy có thể trông hẹp hơn.",
+      "visualCode": "HT",
+      "hairLength": "short",
+      "fade": "high",
+      "fringe": "textured_up",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy",
+        "curly"
+      ]
+    },
+    {
+      "id": "high_top_fade",
+      "name": "High Top Fade",
+      "subtitle": "Chiều cao rõ ở đỉnh với hai bên fade mạnh",
+      "summary": "Một biểu tượng phong cách mạnh mẽ cho tóc coily/curly.",
+      "fitShapes": [
+        "round",
+        "oval",
+        "square"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "curly",
+        "coily"
+      ],
+      "densityFit": [
+        "thick"
+      ],
+      "maintenanceLevel": "high",
+      "styleTags": [
+        "bold",
+        "iconic"
+      ],
+      "contextTags": [
+        "casual",
+        "night"
+      ],
+      "fitReason": "Rất hiệu quả để tạo chiều cao cho mặt tròn và tăng cấu trúc.",
+      "avoidReason": "Mặt dài dễ bị kéo thêm nếu giữ độ cao quá lớn.",
+      "visualCode": "HF",
+      "hairLength": "short",
+      "fade": "high",
+      "fringe": "none",
+      "parting": "none",
+      "curlPattern": [
+        "curly",
+        "coily"
+      ]
+    },
+    {
+      "id": "american_high_and_tight",
+      "name": "High and Tight",
+      "subtitle": "Hai bên rất gọn với phần trên cực ngắn theo tinh thần Mỹ",
+      "summary": "Mạnh, sạch và rất ít bảo trì.",
+      "fitShapes": [
+        "oval",
+        "round",
+        "square"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy",
+        "curly",
+        "coily"
+      ],
+      "densityFit": [
+        "thin",
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "american",
+        "clean",
+        "military"
+      ],
+      "contextTags": [
+        "office",
+        "casual"
+      ],
+      "fitReason": "Làm mặt tròn gọn hơn nhờ sides sát và đỉnh ngắn có kiểm soát.",
+      "avoidReason": "Mặt dài có thể trông dài và hẹp hơn nữa.",
+      "visualCode": "AHT",
+      "hairLength": "short",
+      "fade": "high",
+      "fringe": "none",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy",
+        "curly",
+        "coily"
+      ]
+    },
+    {
+      "id": "ivy_league",
+      "name": "Ivy League",
+      "subtitle": "Biến thể dài hơn của crew cut với nét preppy",
+      "summary": "Gọn nhưng lịch hơn và dễ tạo ngôi nhẹ.",
+      "fitShapes": [
+        "oval",
+        "square",
+        "round"
+      ],
+      "avoidShapes": [],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "thin",
+        "normal"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "classic",
+        "clean",
+        "preppy"
+      ],
+      "contextTags": [
+        "office",
+        "student"
+      ],
+      "fitReason": "Tạo cảm giác chỉnh tề và linh hoạt hơn crew cut truyền thống.",
+      "avoidReason": "Ít kỵ, nhưng tóc quá dày có thể cần texture thêm.",
+      "visualCode": "IL",
+      "hairLength": "short",
+      "fade": "none",
+      "fringe": "short_side",
+      "parting": "side",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "low_taper_straight",
+      "name": "Low Taper Cổ Điển",
+      "subtitle": "Taper thấp tinh tế, giữ lại nhiều tóc ở phần trên",
+      "summary": "Rất dễ mặc và hợp môi trường công sở.",
+      "fitShapes": [
+        "oval",
+        "round",
+        "square",
+        "heart"
+      ],
+      "avoidShapes": [],
+      "textureFit": [
+        "straight",
+        "wavy",
+        "curly",
+        "coily"
+      ],
+      "densityFit": [
+        "thin",
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "clean",
+        "classic"
+      ],
+      "contextTags": [
+        "office",
+        "casual",
+        "student"
+      ],
+      "fitReason": "Tạo độ gọn nhẹ mà không làm tương phản quá mạnh.",
+      "avoidReason": "Hiệu ứng chỉnh mặt sẽ nhẹ hơn fade cao hoặc quiff.",
+      "visualCode": "LP",
+      "hairLength": "short",
+      "fade": "low_taper",
+      "fringe": "none",
+      "parting": "natural",
+      "curlPattern": [
+        "straight",
+        "wavy",
+        "curly",
+        "coily"
+      ]
+    },
+    {
+      "id": "quiff_fade",
+      "name": "Quiff Fade",
+      "subtitle": "Phần trước dựng nhẹ với hai bên fade gọn",
+      "summary": "Tạo chiều cao vừa phải, dễ ứng dụng hơn pompadour.",
+      "fitShapes": [
+        "round",
+        "square",
+        "oval"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "clean",
+        "modern"
+      ],
+      "contextTags": [
+        "office",
+        "night",
+        "casual"
+      ],
+      "fitReason": "Rất hiệu quả để tạo độ dài thị giác cho mặt tròn.",
+      "avoidReason": "Nếu dựng quá cao có thể làm mặt dài thêm.",
+      "visualCode": "QF",
+      "hairLength": "short",
+      "fade": "mid",
+      "fringe": "quiff",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "chinese_textured_quiff",
+      "name": "Quiff Texture Trung",
+      "subtitle": "Phần trước dựng nhẹ với hai bên sạch và hiện đại",
+      "summary": "Rất phổ biến trong các kiểu nam Trung thiên smart-casual.",
+      "fitShapes": [
+        "round",
+        "square",
+        "oval"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "chinese",
+        "clean",
+        "modern"
+      ],
+      "contextTags": [
+        "office",
+        "casual",
+        "night"
+      ],
+      "fitReason": "Chiều cao vừa phải giúp gương mặt tròn và vuông gọn hơn.",
+      "avoidReason": "Nếu dựng quá cao có thể làm mặt dài thêm.",
+      "visualCode": "CTQ",
+      "hairLength": "short",
+      "fade": "mid",
+      "fringe": "quiff",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "salaryman_side_part_jp",
+      "name": "Salaryman Side Part",
+      "subtitle": "Ngôi lệch gọn gàng theo tinh thần công sở Nhật",
+      "summary": "Kiểu tóc chỉn chu, sạch và rất hợp môi trường chuyên nghiệp.",
+      "fitShapes": [
+        "oval",
+        "round",
+        "square"
+      ],
+      "avoidShapes": [],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "thin",
+        "normal"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "japanese",
+        "clean",
+        "classic"
+      ],
+      "contextTags": [
+        "office",
+        "formal"
+      ],
+      "fitReason": "Đường ngôi lệch và form gọn giúp khuôn mặt trông chỉnh tề và cân hơn.",
+      "avoidReason": "Ít kỵ mặt nhưng nếu tóc quá dày cần tỉa giảm khối để tránh nặng.",
+      "visualCode": "SSJ",
+      "hairLength": "short",
+      "fade": "none",
+      "fringe": "side_swept",
+      "parting": "side",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "euro_scissor_crop",
+      "name": "Scissor Crop Âu",
+      "subtitle": "Crop cắt kéo tự nhiên, ít tương phản hơn fade machine",
+      "summary": "Tinh tế, hiện đại và hợp người thích sự mềm hơn barber fade.",
+      "fitShapes": [
+        "oval",
+        "square",
+        "long"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy",
+        "curly"
+      ],
+      "densityFit": [
+        "thin",
+        "normal"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "european",
+        "clean",
+        "modern"
+      ],
+      "contextTags": [
+        "office",
+        "casual"
+      ],
+      "fitReason": "Texture nhẹ phía trước làm mềm mặt dài và mặt vuông khá tốt.",
+      "avoidReason": "Nếu phần ngang quá dày ở trán có thể không lợi cho mặt tròn.",
+      "visualCode": "ESC",
+      "hairLength": "short",
+      "fade": "none",
+      "fringe": "textured_forward",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy",
+        "curly"
+      ]
+    },
+    {
+      "id": "african_short_dreads_taper",
+      "name": "Short Dreads Taper",
+      "subtitle": "Dreads ngắn với taper sạch quanh thái dương và gáy",
+      "summary": "Dễ mặc hơn locs dài và rất hợp kiểu sống hiện đại.",
+      "fitShapes": [
+        "oval",
+        "round",
+        "square"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "curly",
+        "coily"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "african",
+        "clean",
+        "bold"
+      ],
+      "contextTags": [
+        "casual",
+        "office"
+      ],
+      "fitReason": "Khối tóc tập trung ở trên giúp mặt gọn và có điểm nhấn.",
+      "avoidReason": "Khối quá cao sẽ kéo dài thị giác không cần thiết.",
+      "visualCode": "SDT",
+      "hairLength": "short",
+      "fade": "taper",
+      "fringe": "none",
+      "parting": "none",
+      "curlPattern": [
+        "curly",
+        "coily"
+      ]
+    },
+    {
+      "id": "britpop_mop",
+      "name": "Britpop Mop",
+      "subtitle": "Mop top kiểu Anh với độ rối mềm và phủ tự nhiên",
+      "summary": "Mang chất retro châu Âu và hợp phong cách casual nghệ sĩ.",
+      "fitShapes": [
+        "long",
+        "oval",
+        "heart"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "thin",
+        "normal"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "european",
+        "retro",
+        "casual"
+      ],
+      "contextTags": [
+        "casual",
+        "student",
+        "night"
+      ],
+      "fitReason": "Giảm chiều cao trán và thêm độ mềm quanh đầu.",
+      "avoidReason": "Tóc phủ ngang má nhiều sẽ không tối ưu cho mặt tròn.",
+      "visualCode": "BPM",
+      "hairLength": "medium",
+      "fade": "none",
+      "fringe": "full",
+      "parting": "natural",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "bro_flow",
+      "name": "Bro Flow",
+      "subtitle": "Tóc trung bình chảy tự nhiên ra sau hoặc sang bên",
+      "summary": "Thoải mái, nam tính mềm và ít bị gò.",
+      "fitShapes": [
+        "oval",
+        "square",
+        "heart"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "wavy",
+        "straight"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "casual",
+        "soft"
+      ],
+      "contextTags": [
+        "casual",
+        "student",
+        "office"
+      ],
+      "fitReason": "Độ rơi tự nhiên giúp làm mềm góc mặt và tăng chiều ngang vừa đủ.",
+      "avoidReason": "Nếu mặt tròn, tóc chảy ngang má có thể làm tổng thể đầy hơn.",
+      "visualCode": "BF",
+      "hairLength": "medium",
+      "fade": "none",
+      "fringe": "none",
+      "parting": "natural",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "burst_fade_mullet",
+      "name": "Burst Fade Mullet",
+      "subtitle": "Fade ôm quanh tai với phần sau để dài",
+      "summary": "Pha trộn hiện đại giữa mullet và fade, rất nổi bật.",
+      "fitShapes": [
+        "oval",
+        "round",
+        "square"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy",
+        "curly",
+        "coily"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "high",
+      "styleTags": [
+        "bold",
+        "edgy"
+      ],
+      "contextTags": [
+        "night",
+        "casual"
+      ],
+      "fitReason": "Tạo dáng mạnh và tăng cá tính mà vẫn giữ form gọn quanh tai.",
+      "avoidReason": "Phần sau kéo dài có thể khiến mặt dài và cổ trông kéo thêm.",
+      "visualCode": "BM",
+      "hairLength": "medium",
+      "fade": "burst",
+      "fringe": "textured_forward",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy",
+        "curly",
+        "coily"
+      ]
+    },
+    {
+      "id": "chinese_campus_two_block",
+      "name": "Campus Two Block Trung",
+      "subtitle": "Hai bên gọn, mái mềm kiểu nam sinh Trung hiện đại",
+      "summary": "Dễ mặc, trẻ và hợp môi trường học đường lẫn đi làm nhẹ.",
+      "fitShapes": [
+        "oval",
+        "round",
+        "heart"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "thin",
+        "normal"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "chinese",
+        "clean",
+        "student"
+      ],
+      "contextTags": [
+        "student",
+        "casual",
+        "office"
+      ],
+      "fitReason": "Giữ độ gọn vừa phải và cho phép chỉnh mái để cân mặt tròn tốt.",
+      "avoidReason": "Nếu mái quá phẳng có thể làm mặt dài trông ngắn cứng.",
+      "visualCode": "CTB",
+      "hairLength": "medium",
+      "fade": "low_taper",
+      "fringe": "soft_forward",
+      "parting": "natural",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "comb_over_fade",
+      "name": "Comb Over Fade",
+      "subtitle": "Tóc chải lệch với phần bên fade rõ",
+      "summary": "Lịch thiệp, sắc và phù hợp môi trường công sở.",
+      "fitShapes": [
+        "round",
+        "oval",
+        "square"
+      ],
+      "avoidShapes": [],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "thin",
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "clean",
+        "classic"
+      ],
+      "contextTags": [
+        "office",
+        "night"
+      ],
+      "fitReason": "Độ lệch và chiều cao nhẹ giúp mặt trông gọn hơn.",
+      "avoidReason": "Nếu đường rẽ quá cứng có thể tăng cảm giác nghiêm hoặc già.",
+      "visualCode": "CO",
+      "hairLength": "medium",
+      "fade": "mid",
+      "fringe": "side_swept",
+      "parting": "side",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "comma_hair",
+      "name": "Comma Hair",
+      "subtitle": "Mái uốn cong dấu phẩy ôm trán kiểu Hàn",
+      "summary": "Làm mềm phần trán và tạo cảm giác lịch thiệp trẻ trung.",
+      "fitShapes": [
+        "round",
+        "heart",
+        "oval"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "thin",
+        "normal"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "korean",
+        "soft"
+      ],
+      "contextTags": [
+        "office",
+        "student",
+        "casual"
+      ],
+      "fitReason": "Đường cong mái tạo điểm nhấn và hỗ trợ cân đối trán.",
+      "avoidReason": "Nếu mái quá dày và kéo dài có thể làm mặt dài nặng hơn.",
+      "visualCode": "CM",
+      "hairLength": "medium",
+      "fade": "low_taper",
+      "fringe": "comma",
+      "parting": "side",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "curly_fringe_taper",
+      "name": "Curly Fringe Taper",
+      "subtitle": "Mái xoăn đổ trước nhẹ với taper sạch hai bên",
+      "summary": "Giữ được texture tự nhiên nhưng vẫn gọn và dễ mặc.",
+      "fitShapes": [
+        "long",
+        "oval",
+        "heart"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "curly",
+        "coily",
+        "wavy"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "soft",
+        "clean",
+        "natural"
+      ],
+      "contextTags": [
+        "student",
+        "casual",
+        "office"
+      ],
+      "fitReason": "Phần mái giúp rút ngắn chiều cao mặt và tăng độ mềm.",
+      "avoidReason": "Nếu mái nở ngang quá lớn có thể làm mặt tròn bị rộng hơn.",
+      "visualCode": "CF",
+      "hairLength": "medium",
+      "fade": "taper",
+      "fringe": "curly_forward",
+      "parting": "none",
+      "curlPattern": [
+        "curly",
+        "coily",
+        "wavy"
+      ]
+    },
+    {
+      "id": "curtain_men",
+      "name": "Curtain Nam",
+      "subtitle": "Mái rèm nam với độ mở vừa và cảm giác mềm",
+      "summary": "Tạo khung gương mặt tốt và phù hợp nhiều phong cách hiện đại.",
+      "fitShapes": [
+        "heart",
+        "oval",
+        "long"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy",
+        "curly"
+      ],
+      "densityFit": [
+        "thin",
+        "normal"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "korean",
+        "soft"
+      ],
+      "contextTags": [
+        "student",
+        "casual",
+        "night"
+      ],
+      "fitReason": "Tăng độ mềm quanh trán và thái dương, hỗ trợ mặt dài.",
+      "avoidReason": "Mặt tròn có thể bị nhấn vào bề ngang nếu độ mở không hợp.",
+      "visualCode": "CT",
+      "hairLength": "medium",
+      "fade": "none",
+      "fringe": "curtain",
+      "parting": "middle",
+      "curlPattern": [
+        "straight",
+        "wavy",
+        "curly"
+      ]
+    },
+    {
+      "id": "american_curtains_90s",
+      "name": "Curtains 90s Mỹ",
+      "subtitle": "Ngôi giữa mềm kiểu Mỹ thập niên 90 được hồi sinh",
+      "summary": "Thoải mái, trẻ và hợp phong cách casual hoài cổ.",
+      "fitShapes": [
+        "heart",
+        "oval",
+        "long"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "thin",
+        "normal"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "american",
+        "retro",
+        "soft"
+      ],
+      "contextTags": [
+        "student",
+        "casual"
+      ],
+      "fitReason": "Giữ độ mềm quanh trán và thái dương, hợp mặt dài và trái tim.",
+      "avoidReason": "Phần mái mở ngang có thể làm mặt tròn thêm rộng.",
+      "visualCode": "AC9",
+      "hairLength": "medium",
+      "fade": "none",
+      "fringe": "curtain",
+      "parting": "middle",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "japanese_host_layer",
+      "name": "Host Layer Nhật",
+      "subtitle": "Layer nhẹ với độ bay và texture bóng nổi bật",
+      "summary": "Mang cảm giác thời trang, sắc và có độ phô diễn cao.",
+      "fitShapes": [
+        "round",
+        "oval",
+        "square"
+      ],
+      "avoidShapes": [
+        "heart"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "high",
+      "styleTags": [
+        "japanese",
+        "editorial",
+        "bold"
+      ],
+      "contextTags": [
+        "night",
+        "casual"
+      ],
+      "fitReason": "Tầng tóc và độ nâng quanh đỉnh giúp mặt tròn và mặt vuông thanh hơn.",
+      "avoidReason": "Phần đỉnh và mái xử lý quá mạnh có thể làm phần trên mặt bị áp đảo.",
+      "visualCode": "JH",
+      "hairLength": "medium",
+      "fade": "none",
+      "fringe": "textured_up",
+      "parting": "side",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "japanese_mash",
+      "name": "Japanese Mash",
+      "subtitle": "Phom tròn nhẹ với mái phủ mềm kiểu Nhật",
+      "summary": "Tạo cảm giác trẻ, hiền và cân mặt tốt khi cắt đúng độ nặng.",
+      "fitShapes": [
+        "long",
+        "heart",
+        "oval"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "japanese",
+        "soft",
+        "student"
+      ],
+      "contextTags": [
+        "student",
+        "casual"
+      ],
+      "fitReason": "Khung tóc tròn và mái phủ giúp rút ngắn thị giác của mặt dài.",
+      "avoidReason": "Nếu phần ngang quanh má quá dày có thể làm mặt tròn trông rộng hơn.",
+      "visualCode": "JM",
+      "hairLength": "medium",
+      "fade": "none",
+      "fringe": "full",
+      "parting": "natural",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "euro_mod_cut",
+      "name": "Mod Cut Âu",
+      "subtitle": "Lấy cảm hứng mod British với mái và form phủ mềm",
+      "summary": "Có nét retro nhưng vẫn hợp styling hiện đại.",
+      "fitShapes": [
+        "long",
+        "heart",
+        "oval"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "european",
+        "retro",
+        "soft"
+      ],
+      "contextTags": [
+        "casual",
+        "night"
+      ],
+      "fitReason": "Mái và khối ngang quanh đầu giúp mặt dài cân hơn.",
+      "avoidReason": "Có thể làm mặt tròn bị nở ở vùng má và thái dương.",
+      "visualCode": "EMC",
+      "hairLength": "medium",
+      "fade": "none",
+      "fringe": "full",
+      "parting": "natural",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "mop_top",
+      "name": "Mop Top",
+      "subtitle": "Tóc trung bình rủ xuống tự nhiên, có độ phủ trán và tai",
+      "summary": "Phong cách mềm, trẻ và mang hơi hướng retro hiện đại.",
+      "fitShapes": [
+        "long",
+        "heart",
+        "oval"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "thin",
+        "normal"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "soft",
+        "retro"
+      ],
+      "contextTags": [
+        "student",
+        "casual"
+      ],
+      "fitReason": "Độ rủ giúp hạ trán và làm mặt dài bớt kéo dọc.",
+      "avoidReason": "Khối tóc phủ quanh má có thể làm mặt tròn trông đầy hơn.",
+      "visualCode": "MT",
+      "hairLength": "medium",
+      "fade": "none",
+      "fringe": "full",
+      "parting": "natural",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "modern_mullet",
+      "name": "Mullet Hiện Đại",
+      "subtitle": "Ngắn phía trước và hai bên, dài hơn ở gáy nhưng mềm hơn bản cổ điển",
+      "summary": "Một kiểu tóc cá tính, thời trang và đang có nhiều biến thể.",
+      "fitShapes": [
+        "oval",
+        "round",
+        "square"
+      ],
+      "avoidShapes": [
+        "long",
+        "heart"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy",
+        "curly"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "high",
+      "styleTags": [
+        "edgy",
+        "retro",
+        "bold"
+      ],
+      "contextTags": [
+        "night",
+        "student",
+        "casual"
+      ],
+      "fitReason": "Tăng cá tính mạnh, hợp mặt cần thêm cấu trúc và điểm nhấn.",
+      "avoidReason": "Nếu phần gáy quá dài và phần trên quá cao có thể lệch tỷ lệ mặt.",
+      "visualCode": "MM",
+      "hairLength": "medium",
+      "fade": "none",
+      "fringe": "textured_forward",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy",
+        "curly"
+      ]
+    },
+    {
+      "id": "middle_part_men",
+      "name": "Ngôi Giữa Nam",
+      "subtitle": "Tóc rẽ giữa với hai cánh ôm mặt",
+      "summary": "Phong cách Hàn hiện đại, trẻ và rất phổ biến.",
+      "fitShapes": [
+        "heart",
+        "oval",
+        "long"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "thin",
+        "normal"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "korean",
+        "soft",
+        "clean"
+      ],
+      "contextTags": [
+        "student",
+        "casual",
+        "office"
+      ],
+      "fitReason": "Khung tóc hai bên giúp mặt thanh và mềm hơn.",
+      "avoidReason": "Có thể mở vùng má nhiều hơn trên gương mặt tròn.",
+      "visualCode": "MP",
+      "hairLength": "medium",
+      "fade": "none",
+      "fringe": "curtain",
+      "parting": "middle",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "middle_part_perm_korean_cn",
+      "name": "Ngôi Giữa Uốn Nhẹ Đông Á",
+      "subtitle": "Ngôi giữa kết hợp uốn nhẹ giúp tóc ôm và mềm hơn",
+      "summary": "Rất phổ biến trong phong cách Hàn - Trung hiện đại của nam trẻ.",
+      "fitShapes": [
+        "heart",
+        "oval",
+        "long"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "thin",
+        "normal"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "korean",
+        "chinese",
+        "soft"
+      ],
+      "contextTags": [
+        "student",
+        "office",
+        "casual"
+      ],
+      "fitReason": "Độ uốn nhẹ giúp hai cánh mái không bị bẹt và ôm mặt đẹp hơn.",
+      "avoidReason": "Mặt tròn có thể bị nhấn bề ngang nếu mái mở quá nhiều.",
+      "visualCode": "MPC",
+      "hairLength": "medium",
+      "fade": "none",
+      "fringe": "curtain",
+      "parting": "middle",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "pompadour_taper",
+      "name": "Pompadour Taper",
+      "subtitle": "Nâng cao phần trước với phần viền ôm sát",
+      "summary": "Một kiểu tóc sắc và nổi bật, tăng rõ cảm giác chiều cao gương mặt.",
+      "fitShapes": [
+        "round",
+        "oval"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "high",
+      "styleTags": [
+        "bold",
+        "editorial"
+      ],
+      "contextTags": [
+        "night",
+        "office"
+      ],
+      "fitReason": "Độ cao rõ ở phần trước đặc biệt hợp khi gương mặt thiên tròn.",
+      "avoidReason": "Độ cao quá nhiều có thể làm mặt dài bị kéo dài thêm.",
+      "visualCode": "PT",
+      "hairLength": "medium",
+      "fade": "taper",
+      "fringe": "quiff",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "structured_side_part",
+      "name": "Side Part Cấu Trúc",
+      "subtitle": "Phom gọn gàng với độ nâng có chủ đích",
+      "summary": "Tạo độ lệch và tăng chiều cao rõ hơn ở phần trước.",
+      "fitShapes": [
+        "round",
+        "oval",
+        "square"
+      ],
+      "avoidShapes": [],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "clean",
+        "editorial"
+      ],
+      "contextTags": [
+        "office",
+        "night"
+      ],
+      "fitReason": "Độ phồng có hướng giúp gương mặt sắc nét hơn và gọn vùng giữa mặt.",
+      "avoidReason": "Nếu cắt quá gắt có thể làm lộ trán nhiều hơn mong muốn.",
+      "visualCode": "SP",
+      "hairLength": "medium",
+      "fade": "none",
+      "fringe": "side_swept",
+      "parting": "side",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "slick_back_undercut",
+      "name": "Slick Back Undercut",
+      "subtitle": "Hai bên cắt sát với phần trên vuốt ngược ra sau",
+      "summary": "Sắc, mạnh và mang phong cách trưởng thành rõ.",
+      "fitShapes": [
+        "oval",
+        "square"
+      ],
+      "avoidShapes": [
+        "long",
+        "round"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "high",
+      "styleTags": [
+        "bold",
+        "sharp"
+      ],
+      "contextTags": [
+        "night",
+        "office"
+      ],
+      "fitReason": "Tôn đường hàm và cổ rất rõ, tạo khí chất mạnh.",
+      "avoidReason": "Không che trán hay má, có thể kéo mặt dài hoặc lộ bề ngang tròn.",
+      "visualCode": "SU",
+      "hairLength": "medium",
+      "fade": "undercut",
+      "fringe": "slick_back",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "chinese_soft_mullet",
+      "name": "Soft Mullet Trung",
+      "subtitle": "Mullet mềm với đuôi vừa phải và mái nhẹ",
+      "summary": "Một biến thể dễ mặc hơn mullet mạnh, hợp xu hướng trẻ.",
+      "fitShapes": [
+        "oval",
+        "round",
+        "square"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "chinese",
+        "soft",
+        "trend"
+      ],
+      "contextTags": [
+        "student",
+        "casual",
+        "night"
+      ],
+      "fitReason": "Cho cá tính nhưng vẫn giữ được độ mềm quanh mặt.",
+      "avoidReason": "Phần gáy nếu để quá dài sẽ kéo mặt dài thêm.",
+      "visualCode": "CSM",
+      "hairLength": "medium",
+      "fade": "none",
+      "fringe": "textured_forward",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "african_twist_locs_top",
+      "name": "Twists + Fade",
+      "subtitle": "Twists giữ trên đỉnh kết hợp fade gọn hai bên",
+      "summary": "Vừa giữ texture tự nhiên vừa có tổng thể sắc và hiện đại.",
+      "fitShapes": [
+        "round",
+        "oval",
+        "heart"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "curly",
+        "coily"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "african",
+        "modern",
+        "natural"
+      ],
+      "contextTags": [
+        "office",
+        "casual",
+        "night"
+      ],
+      "fitReason": "Đỉnh có khối nhưng sides sạch giúp mặt tròn cân và thanh hơn.",
+      "avoidReason": "Nếu twists quá dài và dựng cao có thể làm mặt dài thêm.",
+      "visualCode": "TWF",
+      "hairLength": "medium",
+      "fade": "mid",
+      "fringe": "curly_top",
+      "parting": "none",
+      "curlPattern": [
+        "curly",
+        "coily"
+      ]
+    },
+    {
+      "id": "two_block",
+      "name": "Two Block",
+      "subtitle": "Hai bên và gáy gọn, phần trên dài hơn rõ",
+      "summary": "Một trong những form nền tảng của tóc nam Hàn hiện đại.",
+      "fitShapes": [
+        "oval",
+        "heart",
+        "round"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "korean",
+        "clean"
+      ],
+      "contextTags": [
+        "student",
+        "office",
+        "casual"
+      ],
+      "fitReason": "Dễ biến hóa thành mái rèm, side part hoặc texture nhẹ để chỉnh mặt.",
+      "avoidReason": "Nếu phần trên quá dày và nặng có thể làm mặt nhỏ bị nuốt.",
+      "visualCode": "TB",
+      "hairLength": "medium",
+      "fade": "low_taper",
+      "fringe": "curtain",
+      "parting": "middle",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "undercut_textured_top",
+      "name": "Undercut Đỉnh Texture",
+      "subtitle": "Phần trên có texture với độ tương phản mạnh hai bên",
+      "summary": "Tạo cá tính và nhấn khối trên đầu rõ rệt.",
+      "fitShapes": [
+        "round",
+        "oval",
+        "square"
+      ],
+      "avoidShapes": [
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy",
+        "curly"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "bold",
+        "modern"
+      ],
+      "contextTags": [
+        "casual",
+        "night"
+      ],
+      "fitReason": "Giúp mặt tròn có thêm chiều cao và góc cạnh.",
+      "avoidReason": "Tương phản quá lớn có thể làm mặt dài trông hẹp hơn nữa.",
+      "visualCode": "UT",
+      "hairLength": "medium",
+      "fade": "undercut",
+      "fringe": "textured_up",
+      "parting": "none",
+      "curlPattern": [
+        "straight",
+        "wavy",
+        "curly"
+      ]
+    },
+    {
+      "id": "spanish_wavy_medium",
+      "name": "Wavy Medium Địa Trung Hải",
+      "subtitle": "Tóc trung bình gợn sóng tự nhiên, hơi lùi về sau",
+      "summary": "Rất hợp chất tóc dày hơi gợn, mang vẻ nam tính mềm.",
+      "fitShapes": [
+        "square",
+        "oval",
+        "heart"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "wavy",
+        "curly"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "european",
+        "soft",
+        "natural"
+      ],
+      "contextTags": [
+        "casual",
+        "night"
+      ],
+      "fitReason": "Sóng tự nhiên làm mềm xương mặt và tạo texture đẹp không gượng.",
+      "avoidReason": "Khối ngang ở thái dương và má có thể làm mặt tròn đầy hơn.",
+      "visualCode": "SWM",
+      "hairLength": "medium",
+      "fade": "none",
+      "fringe": "none",
+      "parting": "natural",
+      "curlPattern": [
+        "wavy",
+        "curly"
+      ]
+    },
+    {
+      "id": "slick_wet_italian",
+      "name": "Wet Slick Ý",
+      "subtitle": "Tóc chải lùi bóng với cảm giác sang và trưởng thành",
+      "summary": "Một kiểu đậm chất Âu, hợp sự kiện hoặc môi trường formal.",
+      "fitShapes": [
+        "oval",
+        "square"
+      ],
+      "avoidShapes": [
+        "round",
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "high",
+      "styleTags": [
+        "european",
+        "formal",
+        "sharp"
+      ],
+      "contextTags": [
+        "formal",
+        "night",
+        "office"
+      ],
+      "fitReason": "Tôn hàm và xương gò má đẹp, tạo cảm giác quyền lực.",
+      "avoidReason": "Không che gương mặt nên sẽ làm lộ tỷ lệ mặt thật khá rõ.",
+      "visualCode": "SWI",
+      "hairLength": "medium",
+      "fade": "none",
+      "fringe": "slick_back",
+      "parting": "pulled_back",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "wolf_cut_men",
+      "name": "Wolf Cut Nam",
+      "subtitle": "Layer rối có chủ đích với tinh thần Hàn/Nhật trẻ",
+      "summary": "Nổi bật, mềm nhưng vẫn có độ hoang dã thời trang.",
+      "fitShapes": [
+        "round",
+        "oval",
+        "square"
+      ],
+      "avoidShapes": [
+        "heart"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy",
+        "curly"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "high",
+      "styleTags": [
+        "korean",
+        "edgy",
+        "bold"
+      ],
+      "contextTags": [
+        "student",
+        "casual",
+        "night"
+      ],
+      "fitReason": "Tầng layer cao giúp tăng chiều cao và texture quanh đầu.",
+      "avoidReason": "Có thể làm phần trán và đỉnh đầu trông nặng nếu cắt sai độ.",
+      "visualCode": "WK",
+      "hairLength": "medium",
+      "fade": "none",
+      "fringe": "textured_forward",
+      "parting": "middle",
+      "curlPattern": [
+        "straight",
+        "wavy",
+        "curly"
+      ]
+    },
+    {
+      "id": "cornrow_bun",
+      "name": "Cornrow Bun",
+      "subtitle": "Cornrows kéo về sau và gom thành búi hoặc knot",
+      "summary": "Gọn, mạnh, có tính bảo vệ tóc và rất nhận diện.",
+      "fitShapes": [
+        "oval",
+        "heart",
+        "long"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "coily",
+        "curly"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "african",
+        "protective",
+        "sharp"
+      ],
+      "contextTags": [
+        "night",
+        "casual"
+      ],
+      "fitReason": "Đường tóc kéo dọc ra sau tạo cảm giác gọn và có trật tự.",
+      "avoidReason": "Hoàn toàn kéo tóc ra sau nên ít che các vùng mặt rộng.",
+      "visualCode": "CRB",
+      "hairLength": "long",
+      "fade": "none",
+      "fringe": "none",
+      "parting": "pulled_back",
+      "curlPattern": [
+        "coily",
+        "curly"
+      ]
+    },
+    {
+      "id": "african_freeform_locs",
+      "name": "Freeform Locs",
+      "subtitle": "Locs tự do với texture và form tự nhiên rõ nét",
+      "summary": "Đậm cá tính, giàu bản sắc và rất linh hoạt về silhouette.",
+      "fitShapes": [
+        "oval",
+        "round",
+        "heart",
+        "square",
+        "long"
+      ],
+      "avoidShapes": [],
+      "textureFit": [
+        "coily",
+        "curly"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "african",
+        "natural",
+        "bold"
+      ],
+      "contextTags": [
+        "casual",
+        "night"
+      ],
+      "fitReason": "Có thể điều chỉnh độ dài và độ rơi để phù hợp nhiều khuôn mặt.",
+      "avoidReason": "Khối locs dày quanh má cần được kiểm soát nếu mặt tròn.",
+      "visualCode": "FFL",
+      "hairLength": "long",
+      "fade": "none",
+      "fringe": "none",
+      "parting": "natural",
+      "curlPattern": [
+        "coily",
+        "curly"
+      ]
+    },
+    {
+      "id": "man_bun",
+      "name": "Man Bun",
+      "subtitle": "Buộc gọn tóc dài ra sau thành búi",
+      "summary": "Gọn, nam tính và tiện khi tóc đã dài qua vai hoặc gần vai.",
+      "fitShapes": [
+        "oval",
+        "heart"
+      ],
+      "avoidShapes": [
+        "round",
+        "square"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy",
+        "curly"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "clean",
+        "casual"
+      ],
+      "contextTags": [
+        "casual",
+        "office"
+      ],
+      "fitReason": "Làm nổi đường cổ và xương mặt, tạo cảm giác gọn gàng.",
+      "avoidReason": "Không có lớp tóc hỗ trợ che mặt nên dễ lộ tỷ lệ thật của khuôn mặt.",
+      "visualCode": "MN",
+      "hairLength": "long",
+      "fade": "none",
+      "fringe": "none",
+      "parting": "pulled_back",
+      "curlPattern": [
+        "straight",
+        "wavy",
+        "curly"
+      ]
+    },
+    {
+      "id": "japanese_center_part_long",
+      "name": "Ngôi Giữa Nhật Dài",
+      "subtitle": "Tóc dài vừa với ngôi giữa và form mềm ôm mặt",
+      "summary": "Thanh, lạnh và hợp phong cách thời trang Nhật hiện đại.",
+      "fitShapes": [
+        "heart",
+        "oval",
+        "long"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "thin",
+        "normal"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "japanese",
+        "soft",
+        "fashion"
+      ],
+      "contextTags": [
+        "student",
+        "casual",
+        "night"
+      ],
+      "fitReason": "Giúp đường mặt mềm hơn và kéo ánh nhìn dọc xuống hai bên.",
+      "avoidReason": "Trên mặt tròn, phần tóc ôm ngang má có thể làm tổng thể đầy hơn.",
+      "visualCode": "JC",
+      "hairLength": "long",
+      "fade": "none",
+      "fringe": "curtain",
+      "parting": "middle",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "samurai_knot",
+      "name": "Samurai Knot",
+      "subtitle": "Buộc phần tóc trên cao trong khi phần dưới có thể giữ ngắn hoặc cắt sát",
+      "summary": "Mang vẻ mạnh, sắc và khác biệt hơn man bun thường.",
+      "fitShapes": [
+        "oval",
+        "square"
+      ],
+      "avoidShapes": [
+        "round",
+        "long"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "bold",
+        "sharp"
+      ],
+      "contextTags": [
+        "night",
+        "casual"
+      ],
+      "fitReason": "Tạo đường nét mạnh và tập trung điểm nhìn lên đỉnh đầu.",
+      "avoidReason": "Đỉnh quá cao và sides quá gọn có thể làm mặt dài hơn.",
+      "visualCode": "SM",
+      "hairLength": "long",
+      "fade": "undercut",
+      "fringe": "none",
+      "parting": "pulled_back",
+      "curlPattern": [
+        "straight",
+        "wavy"
+      ]
+    },
+    {
+      "id": "surfer_hair",
+      "name": "Surfer Hair",
+      "subtitle": "Tóc trung bình hoặc dài với độ rối nhẹ tự nhiên",
+      "summary": "Thoải mái, trẻ và hợp chất tóc có gợn sóng.",
+      "fitShapes": [
+        "oval",
+        "square",
+        "heart"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "wavy",
+        "curly"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "low",
+      "styleTags": [
+        "casual",
+        "soft"
+      ],
+      "contextTags": [
+        "casual",
+        "student",
+        "travel"
+      ],
+      "fitReason": "Sóng tự nhiên giúp mặt vuông bớt cứng và tổng thể rất dễ chịu.",
+      "avoidReason": "Tóc phủ ngang má nhiều có thể làm mặt tròn bị rộng hơn.",
+      "visualCode": "SH",
+      "hairLength": "long",
+      "fade": "none",
+      "fringe": "soft_forward",
+      "parting": "natural",
+      "curlPattern": [
+        "wavy",
+        "curly"
+      ]
+    },
+    {
+      "id": "long_layered_men",
+      "name": "Tóc Dài Layer Nam",
+      "subtitle": "Giữ độ dài nhưng thêm lớp để tóc rơi gọn hơn",
+      "summary": "Phù hợp người muốn tóc dài mà không bị nặng hoặc bẹt.",
+      "fitShapes": [
+        "square",
+        "heart",
+        "oval"
+      ],
+      "avoidShapes": [
+        "round"
+      ],
+      "textureFit": [
+        "straight",
+        "wavy",
+        "curly"
+      ],
+      "densityFit": [
+        "normal",
+        "thick"
+      ],
+      "maintenanceLevel": "medium",
+      "styleTags": [
+        "soft",
+        "casual"
+      ],
+      "contextTags": [
+        "casual",
+        "night",
+        "student"
+      ],
+      "fitReason": "Layer giúp tóc dài nam có chuyển động và ôm mặt tốt hơn.",
+      "avoidReason": "Phần tóc hai bên quá dài có thể làm mặt tròn trông rộng.",
+      "visualCode": "LM",
+      "hairLength": "long",
+      "fade": "none",
+      "fringe": "none",
+      "parting": "natural",
+      "curlPattern": [
+        "straight",
+        "wavy",
+        "curly"
+      ]
+    }
+  ]
+}
