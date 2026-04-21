@@ -8,12 +8,13 @@
         :root {
             --primary-color: #2c3e50;
             --accent-color: #3498db;
+            --zip-color: #e67e22;
             --success-color: #2ecc71;
             --bg-color: #f8f9fa;
             --card-bg: #ffffff;
             --text-color: #333;
-            --border-radius: 10px;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --border-radius: 12px;
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
         }
 
         body {
@@ -27,7 +28,7 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             width: 100%;
         }
 
@@ -50,54 +51,82 @@
             align-items: center;
             gap: 5px;
             margin-bottom: 20px;
+            transition: transform 0.2s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
         }
 
         .model-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
         }
 
         .model-card {
             background: var(--card-bg);
             border-radius: var(--border-radius);
-            padding: 20px;
+            padding: 24px;
             box-shadow: var(--shadow);
-            transition: transform 0.2s;
-            border: 1px solid #eee;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid #edf2f7;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
         }
 
         .model-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
         }
 
         .model-name {
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             color: var(--primary-color);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             word-break: break-all;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #f1f5f9;
+        }
+
+        .section-label {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #718096;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .action-group {
+            margin-bottom: 20px;
+        }
+
+        .action-group:last-child {
+            margin-bottom: 0;
         }
 
         .actions {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 10px;
         }
 
         .btn {
             border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
+            border-radius: 8px;
+            padding: 10px 12px;
             font-weight: 600;
             cursor: pointer;
             text-align: center;
-            transition: background 0.2s;
-            font-size: 0.9rem;
+            transition: all 0.2s;
+            font-size: 0.85rem;
             text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
         }
 
         .btn-copy {
@@ -107,41 +136,61 @@
 
         .btn-copy:hover {
             background-color: #2980b9;
+            filter: brightness(1.1);
         }
 
-        .btn-copy.copied {
-            background-color: var(--success-color);
+        .btn-copy-zip {
+            background-color: var(--zip-color);
+            color: white;
+        }
+
+        .btn-copy-zip:hover {
+            background-color: #d35400;
+            filter: brightness(1.1);
+        }
+
+        .btn.copied {
+            background-color: var(--success-color) !important;
         }
 
         .btn-download {
-            background-color: #eee;
-            color: var(--primary-color);
+            background-color: #f1f5f9;
+            color: #475569;
         }
 
         .btn-download:hover {
-            background-color: #ddd;
+            background-color: #e2e8f0;
+            color: #1e293b;
         }
 
         .toast {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: var(--primary-color);
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1e293b;
             color: white;
-            padding: 12px 24px;
-            border-radius: 30px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            padding: 14px 28px;
+            border-radius: 50px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
             display: none;
-            animation: slideUp 0.3s ease-out;
+            z-index: 1000;
+            font-weight: 600;
         }
 
-        @keyframes slideUp {
-            from { transform: translateY(100px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translate(-50%, 20px); }
+            to { opacity: 1; transform: translate(-50%, 0); }
+        }
+
+        .show-toast {
+            display: block;
+            animation: fadeIn 0.3s ease-out;
         }
 
         @media (max-width: 600px) {
             h1 { font-size: 1.8rem; }
+            .model-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -150,7 +199,7 @@
         <a href="../index.html" class="back-link">← Quay lại trang chủ</a>
         <header>
             <h1>YOLO Models Repository</h1>
-            <p>Danh sách các model YOLO được tối ưu hóa cho CoreML</p>
+            <p>Danh sách các model YOLO được tối ưu hóa cho CoreML (.mlpackage & .zip)</p>
         </header>
 
         <div class="model-grid" id="modelGrid">
@@ -162,16 +211,16 @@
 
     <script>
         const models = [
-            "yolo11l-int8.mlpackage",
-            "yolo11l.mlpackage",
-            "yolo11m-int8.mlpackage",
-            "yolo11m.mlpackage",
-            "yolo11n-int8.mlpackage",
-            "yolo11n.mlpackage",
-            "yolo11s-int8.mlpackage",
-            "yolo11s.mlpackage",
-            "yolo11x-int8.mlpackage",
-            "yolo11x.mlpackage"
+            { name: "yolo11l-int8.mlpackage", hasZip: false },
+            { name: "yolo11l.mlpackage", hasZip: true },
+            { name: "yolo11m-int8.mlpackage", hasZip: false },
+            { name: "yolo11m.mlpackage", hasZip: true },
+            { name: "yolo11n-int8.mlpackage", hasZip: false },
+            { name: "yolo11n.mlpackage", hasZip: true },
+            { name: "yolo11s-int8.mlpackage", hasZip: false },
+            { name: "yolo11s.mlpackage", hasZip: true },
+            { name: "yolo11x-int8.mlpackage", hasZip: false },
+            { name: "yolo11x.mlpackage", hasZip: true }
         ];
 
         const modelGrid = document.getElementById('modelGrid');
@@ -180,23 +229,26 @@
 
         function showToast(message) {
             toast.textContent = message;
-            toast.style.display = 'block';
+            toast.classList.add('show-toast');
             setTimeout(() => {
-                toast.style.display = 'none';
+                toast.classList.remove('show-toast');
             }, 2000);
         }
 
         function copyToClipboard(text, btn) {
             navigator.clipboard.writeText(text).then(() => {
-                const originalText = btn.textContent;
-                btn.textContent = '✓ Đã sao chép';
+                const originalContent = btn.innerHTML;
+                btn.innerHTML = '✓ Đã chép';
                 btn.classList.add('copied');
-                showToast('Đã sao chép liên kết!');
+                showToast('Đã sao chép liên kết vào bộ nhớ tạm!');
                 
                 setTimeout(() => {
-                    btn.textContent = originalText;
+                    btn.innerHTML = originalContent;
                     btn.classList.remove('copied');
                 }, 2000);
+            }).catch(err => {
+                console.error('Không thể sao chép: ', err);
+                showToast('Lỗi khi sao chép!');
             });
         }
 
@@ -204,13 +256,34 @@
             const card = document.createElement('div');
             card.className = 'model-card';
             
-            const downloadUrl = baseUrl + model;
+            const pkgUrl = baseUrl + model.name;
+            const zipName = model.name + ".zip";
+            const zipUrl = baseUrl + zipName;
             
+            let zipSection = '';
+            if (model.hasZip) {
+                zipSection = `
+                    <div class="section-label">Nén (.zip)</div>
+                    <div class="actions">
+                        <button class="btn btn-copy-zip" onclick="copyToClipboard('${zipUrl}', this)">📋 Link ZIP</button>
+                        <a href="${zipName}" class="btn btn-download" download>💾 Tải ZIP</a>
+                    </div>
+                `;
+            }
+
             card.innerHTML = `
-                <div class="model-name">${model}</div>
-                <div class="actions">
-                    <button class="btn btn-copy" onclick="copyToClipboard('${downloadUrl}', this)">Sao chép link tải</button>
-                    <a href="${model}" class="btn btn-download" download>Tải về trực tiếp</a>
+                <div class="model-name">${model.name}</div>
+                
+                <div class="action-group">
+                    <div class="section-label">Thư mục (.mlpackage)</div>
+                    <div class="actions">
+                        <button class="btn btn-copy" onclick="copyToClipboard('${pkgUrl}', this)">📋 Link Gốc</button>
+                        <a href="${model.name}" class="btn btn-download">📂 Xem thư mục</a>
+                    </div>
+                </div>
+
+                <div class="action-group">
+                    ${zipSection}
                 </div>
             `;
             
