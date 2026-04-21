@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOLO Models - Terrarium Data</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --success-color: #2ecc71;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #333;
+            --border-radius: 10px;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: var(--accent-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 20px;
+        }
+
+        .model-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .model-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+            border: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .model-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .model-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            word-break: break-all;
+        }
+
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn {
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            transition: background 0.2s;
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+
+        .btn-copy {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        .btn-copy:hover {
+            background-color: #2980b9;
+        }
+
+        .btn-copy.copied {
+            background-color: var(--success-color);
+        }
+
+        .btn-download {
+            background-color: #eee;
+            color: var(--primary-color);
+        }
+
+        .btn-download:hover {
+            background-color: #ddd;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            display: none;
+            animation: slideUp 0.3s ease-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">← Quay lại trang chủ</a>
+        <header>
+            <h1>YOLO Models Repository</h1>
+            <p>Danh sách các model YOLO được tối ưu hóa cho CoreML</p>
+        </header>
+
+        <div class="model-grid" id="modelGrid">
+            <!-- Models will be populated here -->
+        </div>
+    </div>
+
+    <div id="toast" class="toast">Đã sao chép liên kết!</div>
+
+    <script>
+        const models = [
+            "yolo11l-int8.mlpackage",
+            "yolo11l.mlpackage",
+            "yolo11m-int8.mlpackage",
+            "yolo11m.mlpackage",
+            "yolo11n-int8.mlpackage",
+            "yolo11n.mlpackage",
+            "yolo11s-int8.mlpackage",
+            "yolo11s.mlpackage",
+            "yolo11x-int8.mlpackage",
+            "yolo11x.mlpackage"
+        ];
+
+        const modelGrid = document.getElementById('modelGrid');
+        const toast = document.getElementById('toast');
+        const baseUrl = window.location.origin + window.location.pathname.replace('index.html', '');
+
+        function showToast(message) {
+            toast.textContent = message;
+            toast.style.display = 'block';
+            setTimeout(() => {
+                toast.style.display = 'none';
+            }, 2000);
+        }
+
+        function copyToClipboard(text, btn) {
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = btn.textContent;
+                btn.textContent = '✓ Đã sao chép';
+                btn.classList.add('copied');
+                showToast('Đã sao chép liên kết!');
+                
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+
+        models.forEach(model => {
+            const card = document.createElement('div');
+            card.className = 'model-card';
+            
+            const downloadUrl = baseUrl + model;
+            
+            card.innerHTML = `
+                <div class="model-name">${model}</div>
+                <div class="actions">
+                    <button class="btn btn-copy" onclick="copyToClipboard('${downloadUrl}', this)">Sao chép link tải</button>
+                    <a href="${model}" class="btn btn-download" download>Tải về trực tiếp</a>
+                </div>
+            `;
+            
+            modelGrid.appendChild(card);
+        });
+    </script>
+</body>
+</html>
