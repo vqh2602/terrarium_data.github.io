@@ -30,7 +30,11 @@ if ($('modeBadge')) {
   $('modeBadge').classList.toggle('is-demo', isDemo);
 }
 if ($('backBtn')) {
-  $('backBtn').hidden = !isDemo;
+  if (!isDemo) {
+    $('backBtn').remove();
+  } else {
+    $('backBtn').hidden = false;
+  }
 }
 if ($('demoReplay')) {
   $('demoReplay').hidden = !isDemo;
@@ -40,7 +44,8 @@ if ($('demoReplay')) {
   };
 }
 if ($('demoLink')) {
-  $('demoLink').hidden = isDemo;
+  const inApp = Boolean(window.webkit?.messageHandlers?.terrariumEventV2);
+  $('demoLink').hidden = isDemo || inApp;
 }
 
 // Sound button

@@ -39,6 +39,10 @@ a {
   color: inherit;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 /* FX Canvas & Overlays */
 .fx-canvas {
   position: fixed;
