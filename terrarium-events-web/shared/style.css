@@ -1928,12 +1928,174 @@ header:not(.game-topbar):not(.topbar) a {
   .daily-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .monthly-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
   .milestone-card {
     flex-wrap: wrap;
   }
   .milestone-btn {
     width: 100%;
   }
+}
+
+/* ========================
+   MONTHLY 30-DAY CHECK-IN
+   ======================== */
+.item-art.rarity--epic {
+  background: radial-gradient(circle at 50% 40%, rgba(182, 144, 255, 0.34), rgba(255, 255, 255, 0.05));
+  border-color: rgba(182, 144, 255, 0.62);
+  box-shadow: 0 0 14px rgba(182, 144, 255, 0.22);
+}
+
+.monthly-hud {
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.hud-pill--accent {
+  background: rgba(203, 250, 138, 0.16);
+  border-color: rgba(203, 250, 138, 0.45);
+  color: var(--lime);
+}
+
+.monthly-vip-banner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 3px;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(255, 220, 137, 0.18), rgba(203, 250, 138, 0.1));
+  border: 1.5px solid rgba(255, 220, 137, 0.45);
+  color: var(--text);
+}
+
+.monthly-vip-banner.is-active {
+  background: linear-gradient(135deg, rgba(103, 232, 194, 0.22), rgba(255, 220, 137, 0.18));
+  border-color: rgba(255, 220, 137, 0.72);
+}
+
+.vip-banner-title {
+  font-size: 0.84rem;
+  font-weight: 900;
+  color: var(--gold);
+}
+
+.vip-banner-sub {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.monthly-rarity-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.rarity-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--muted);
+}
+
+.rarity-chip-tier {
+  font-weight: 900;
+}
+
+.rarity-chip--common .rarity-chip-tier { color: #d8efe0; }
+.rarity-chip--uncommon .rarity-chip-tier { color: var(--lime); }
+.rarity-chip--rare .rarity-chip-tier { color: var(--mint); }
+.rarity-chip--epic .rarity-chip-tier { color: #c7a6ff; }
+.rarity-chip--legendary .rarity-chip-tier { color: var(--gold); }
+
+.monthly-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 640px) {
+  .monthly-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.monthly-card {
+  padding: 10px 7px;
+  gap: 6px;
+  border-radius: 16px;
+}
+
+.monthly-card .day-card-top {
+  font-size: 0.65rem;
+}
+
+.monthly-card .day-tag {
+  font-size: 0.58rem;
+  padding: 2px 5px;
+}
+
+.monthly-card .day-reward {
+  font-size: 0.7rem;
+}
+
+.monthly-card--milestone {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.monthly-card.rarity-border--rare {
+  border-color: rgba(103, 232, 194, 0.35);
+}
+
+.monthly-card.rarity-border--epic {
+  border-color: rgba(182, 144, 255, 0.45);
+}
+
+.monthly-card.rarity-border--legendary {
+  border-color: rgba(255, 220, 137, 0.5);
+}
+
+.monthly-card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.monthly-card--grand .monthly-card-info {
+  align-items: flex-start;
+}
+
+.monthly-vip-tag,
+.monthly-milestone-tag {
+  font-size: 0.6rem;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 999px;
+}
+
+.monthly-vip-tag {
+  background: rgba(255, 220, 137, 0.22);
+  color: var(--gold);
+}
+
+.monthly-milestone-tag {
+  background: rgba(103, 232, 194, 0.16);
+  color: var(--mint);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -9,8 +9,9 @@ Không cần npm install. HTML/CSS/JS thuần, không có dependency ngoài.
 CẤU TRÚC
 index.html: danh mục bản demo
 KICH_BAN.html: kịch bản để duyệt
-5 URL độc lập: events/slot.html, match.html, oxygen.html, level.html, daily.html
+6 URL độc lập: events/slot.html, match.html, oxygen.html, level.html, daily.html, monthly.html
 shared/config.js: sản phẩm, luật và các ngưỡng MẪU để hiển thị
+shared/monthlyRewards.js: bộ tạo ngẫu nhiên 30 phần thưởng tháng theo độ quý hiếm cho demo/UI
 shared/app.js: UI chung
 shared/bridge.js: adapter native; ?demo=1 chỉ bật mock để duyệt
 shared/demo.js: mô phỏng app/backend trong RAM; KHÔNG dùng cấp quà thật
@@ -43,12 +44,16 @@ revealTile {eventId,roundId,index,requestId}: chỉ trả ô đã mở, không g
 claimReward {eventId,milestone,requestId}: nhận mốc oxygen/level; web không gửi quantity.
 claimReward {eventId,rewardId,requestId}: nhận quà đã chốt trong spin/match.
 checkIn {eventId,requestId}: backend xác định ngày, tăng chỉ số lần điểm danh và cấp quà.
+monthlyCheckIn {eventId,requestId}: điểm danh chuỗi 30 ngày hàng tháng, cấp quà ngẫu nhiên trong tháng (VIP nhận x2 số lượng).
+openVIP {eventId}: mở trang đăng ký Terrarium VIP native từ trong WebView.
 Mỗi lệnh thay đổi trả snapshot mới sau khi lưu thành công; getContext cũng khôi phục
 round, pending rewards và receipt từ backend khi mở lại WebView.
 
 SNAPSHOT MẪU CHO UI HIỆN TẠI
-{oxygenCollected:2400,level:12,spins:3,matchAvailable:true,
- round:null,claims:[],day:0,checkedToday:false,pending:[],wallet:[]}
+{oxygenCollected:2400,level:12,isVIP:false,spins:3,matchAvailable:true,
+ round:null,claims:[],day:0,checkedToday:false,
+ monthlyMonthKey:"2026-11",monthlyDay:0,monthlyCheckedToday:false,monthlyRewards:[],
+ pending:[],wallet:[]}
 round: {id,open:[0],revealed:{"0":"plant2"},attempts:3,ended:false}
 pending: [{id:"reward-id",rewardId:"plant20",eventId:"slot"}]
 lastSpin: {symbols:["plant20","plant20","plant20"],rewardId:"plant20"}

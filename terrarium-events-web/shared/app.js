@@ -8,6 +8,7 @@ import { createMatchGame } from './games/match.js';
 import { createOxygenGame } from './games/oxygen.js';
 import { createLevelGame } from './games/level.js';
 import { createDailyGame } from './games/daily.js';
+import { createMonthlyGame } from './games/monthly.js';
 
 const rootEl = document.querySelector('[data-event]');
 const eventId = rootEl.dataset.event;
@@ -175,6 +176,7 @@ function ensureGameController() {
     case 'oxygen': gameController = createOxygenGame(ctx); break;
     case 'level': gameController = createLevelGame(ctx); break;
     case 'daily': gameController = createDailyGame(ctx); break;
+    case 'monthly': gameController = createMonthlyGame(ctx); break;
   }
   return gameController;
 }

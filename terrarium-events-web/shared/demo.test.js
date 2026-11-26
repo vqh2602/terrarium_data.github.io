@@ -35,3 +35,19 @@ test('match ends after three failed pairs', async () => {
  for (const index of [0,1,2,3,0,8]) await call('revealTile',{roundId:s.round.id,index});
  const end=await call('getContext'); assert.equal(end.round.ended,true); assert.equal(end.round.attempts,0); assert.equal(end.pending.length,0);
 });
+test('monthly generates 30 rewards covering all 5 types and supports VIP x2 check-in', async () => {
+ const call = createDemo(Math.random, { monthKey: '2026-11', isVIP: true });
+ const ctx = await call('getContext', { eventId: 'monthly' });
+ assert.equal(ctx.monthlyRewards.length, 30);
+ const types = new Set(ctx.monthlyRewards.map(r => r.rewardId));
+ for (const id of ['oxygen', 'gemstone', 'ticket', 'fertilizer', 'shovel']) {
+  assert.equal(types.has(id), true, `Missing ${id}`);
+ }
+ const firstReward = ctx.monthlyRewards[0];
+ const claimed = await call('monthlyCheckIn', { eventId: 'monthly', requestId: 'm-1' });
+ assert.equal(claimed.monthlyDay, 1);
+ assert.equal(claimed.monthlyCheckedToday, true);
+ assert.equal(claimed.wallet[0].quantity, firstReward.quantity * 2);
+ assert.equal((await call('monthlyCheckIn', { eventId: 'monthly', requestId: 'm-1' })).monthlyDay, 1);
+ await assert.rejects(call('monthlyCheckIn', { eventId: 'monthly', requestId: 'm-2' }));
+});

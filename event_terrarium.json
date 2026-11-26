@@ -125,6 +125,27 @@
             "create": "2026-11-26",
             "version": "1.0.0",
             "link": "https://vqh2602.github.io/terrarium_data.github.io/terrarium-events-web/events/daily.html"
+        },
+        {
+            "eventdata": [
+                {
+                    "local": "en",
+                    "description": "30 random monthly check-in rewards: Oxygen, Gems, Tickets, Fertilizer & Shovels scaled by rarity. VIP members get 2x!",
+                    "title": "30 Green Days",
+                    "image": "https://iili.io/oqBN7e4.png"
+                },
+                {
+                    "local": "vi",
+                    "description": "Điểm danh 30 ngày mỗi tháng với phần thưởng ngẫu nhiên: Oxygen, Đá quý, Vé, Phân bón, Xẻng theo độ quý hiếm. VIP nhận ×2!",
+                    "title": "30 Ngày Xanh",
+                    "image": "https://iili.io/oqBN7e4.png"
+                }
+            ],
+            "start": "2026-11-26",
+            "end": "2027-12-31",
+            "create": "2026-11-26",
+            "version": "1.0.0",
+            "link": "https://vqh2602.github.io/terrarium_data.github.io/terrarium-events-web/events/monthly.html"
         }
     ]
 }

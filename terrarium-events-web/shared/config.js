@@ -50,6 +50,16 @@ export const events = {
     description: 'Ghé vườn mỗi ngày, mang quà về nhà.',
     rule: '7 lần điểm danh tích lũy trong sự kiện. Mỗi ngày chỉ nhận 1 lần, bỏ ngày không mất tiến độ. Không được nhận bù nhiều ngày cùng lúc. Ngày tính theo Asia/Ho_Chi_Minh từ backend.',
     rewardIds: ['oxygen', 'fertilizer', 'oxygen', 'pot1', 'oxygen', 'fertilizer', 'plant20']
+  },
+  monthly: {
+    title: '30 Ngày Xanh',
+    subtitle: 'Điểm danh 30 ngày nhận quà ngẫu nhiên',
+    badge: '30 ngày/tháng',
+    theme: 'emerald',
+    icon: '🗓️',
+    description: 'Mỗi tháng tạo mới ngẫu nhiên 30 phần thưởng: Oxygen, Đá quý, Vé, Phân bón và Xẻng theo độ quý hiếm.',
+    rule: 'Mỗi tháng (Asia/Ho_Chi_Minh) hệ thống tạo ngẫu nhiên bảng 30 phần thưởng theo độ quý hiếm: Oxygen (Thường), Phân bón (Ít gặp), Xẻng (Hiếm), Đá quý (Sử thi), Vé (Huyền thoại). Sang tháng mới tự động làm mới toàn bộ 30 ngày. Thành viên VIP nhận ×2 số lượng mỗi ngày!',
+    rewardIds: ['oxygen', 'fertilizer', 'shovel', 'gemstone', 'ticket']
   }
 };
 
@@ -93,5 +103,29 @@ export const catalog = {
     localImage: 'assets/items/fertilizer.png',
     quantity: 1,
     rarity: 'uncommon'
+  },
+  shovel: {
+    name: 'Xẻng',
+    subname: 'Di dời cây & chậu',
+    icon: '⛏️',
+    localImage: 'assets/items/shovel.png',
+    quantity: 1,
+    rarity: 'rare'
+  },
+  gemstone: {
+    name: 'Đá quý',
+    subname: 'Ngọc quý khu vườn',
+    icon: '💎',
+    localImage: 'assets/items/gemstone.png',
+    quantity: 10,
+    rarity: 'epic'
+  },
+  ticket: {
+    name: 'Vé thời tiết',
+    subname: 'Tạo mưa & gió',
+    icon: '🎫',
+    localImage: 'assets/items/ticket.png',
+    quantity: 1,
+    rarity: 'legendary'
   }
 };

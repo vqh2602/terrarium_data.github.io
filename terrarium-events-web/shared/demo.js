@@ -1,10 +1,35 @@
 // Chỉ mô phỏng để duyệt kịch bản. Không dùng để xác thực hoặc cấp quà thật.
 import { events, catalog } from './config.js';
-export function createDemo(random = Math.random) {
-  const s = { oxygenCollected: 2400, level: 12, spins: 3, matchAvailable: true, rounds: 0, round: null, claims: [], day: 0, checkedToday: false, pending: [], wallet: [] };
+import { currentVietnamMonthKey, generateMonthlyRewards } from './monthlyRewards.js';
+export function createDemo(random = Math.random, options = {}) {
+  const monthKey = options.monthKey || currentVietnamMonthKey();
+  const s = {
+    oxygenCollected: 2400,
+    level: 12,
+    spins: 3,
+    matchAvailable: true,
+    rounds: 0,
+    round: null,
+    claims: [],
+    day: 0,
+    checkedToday: false,
+    isVIP: Boolean(options.isVIP),
+    monthlyMonthKey: monthKey,
+    monthlyDay: 0,
+    monthlyCheckedToday: false,
+    monthlyRewards: generateMonthlyRewards(monthKey, options.seedSalt || 'demo'),
+    pending: [],
+    wallet: []
+  };
   const receipts = new Map();
   const snapshot = () => structuredClone(s);
-  const grant = (id, key) => { if (s.claims.includes(key)) throw Error('Quà đã nhận.'); s.claims.push(key); s.wallet.push({ id, ...catalog[id] }); };
+  const grant = (id, key, quantityOverride) => {
+    if (s.claims.includes(key)) throw Error('Quà đã nhận.');
+    s.claims.push(key);
+    const entry = { id, ...catalog[id] };
+    if (quantityOverride !== undefined) entry.quantity = quantityOverride;
+    s.wallet.push(entry);
+  };
   return async function call(action, payload = {}) {
     if (payload.requestId && receipts.has(payload.requestId)) return structuredClone(receipts.get(payload.requestId));
     const event = events[payload.eventId];
@@ -55,6 +80,20 @@ export function createDemo(random = Math.random) {
       case 'checkIn': {
         if (s.checkedToday || s.day >= 7) throw Error('Bạn đã điểm danh hôm nay hoặc hoàn thành chuỗi.');
         grant(events.daily.rewardIds[s.day], `daily-${s.day}`); s.day++; s.checkedToday = true; break;
+      }
+      case 'monthlyCheckIn': {
+        if (s.monthlyCheckedToday || s.monthlyDay >= 30) throw Error('Bạn đã điểm danh hôm nay hoặc hoàn thành đủ 30 ngày tháng này.');
+        const reward = s.monthlyRewards[s.monthlyDay];
+        if (!reward) throw Error('Không tìm thấy phần thưởng ngày này.');
+        const qty = reward.quantity * (s.isVIP ? 2 : 1);
+        grant(reward.rewardId, `monthly-${s.monthlyMonthKey}-${s.monthlyDay}`, qty);
+        s.monthlyDay++;
+        s.monthlyCheckedToday = true;
+        break;
+      }
+      case 'toggleDemoVIP': {
+        s.isVIP = !s.isVIP;
+        break;
       }
       default: throw Error('Lệnh chưa hỗ trợ.');
     }
