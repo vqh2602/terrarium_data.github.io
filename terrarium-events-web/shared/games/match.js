@@ -207,5 +207,5 @@ export function createMatchGame({ root, runAction, getAssets, openClaimModal }) 
     });
   }
 
-  return { update, isAnimating: () => animating };
+  return { update, isAnimating: () => false };
 }
