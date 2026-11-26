@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Terrarium · Lật lá tìm quà</title>
+  <link rel="stylesheet" href="../shared/style.css">
+</head>
+<body class="page-game theme-emerald">
+  <header class="game-topbar">
+    <div class="topbar-left">
+      <a class="icon-btn" id="backBtn" href="../index.html" aria-label="Về sảnh">←</a>
+      <div class="topbar-title-wrap">
+        <span class="mode-pill" id="modeBadge">SỰ KIỆN</span>
+        <h1 id="title">Lật lá tìm quà</h1>
+        <p class="topbar-sub" id="subtitle"></p>
+      </div>
+    </div>
+    <div class="topbar-tools">
+      <button class="icon-btn" id="soundBtn" type="button" aria-label="Âm thanh">🔊</button>
+      <button class="icon-btn" id="rulesBtn" type="button" aria-label="Thể lệ">?</button>
+      <button class="icon-btn" id="refresh" type="button" aria-label="Đồng bộ">↻</button>
+    </div>
+  </header>
+
+  <main class="game-main" data-event="match">
+    <div class="notice-pill" role="status" aria-live="polite" id="notice"></div>
+    <section class="game-stage" id="play"></section>
+    <section class="pending-wrap" id="rewards"></section>
+    <section class="wallet-bar" id="wallet"></section>
+    <div class="game-footer-actions">
+      <button class="btn btn-ghost btn-sm" id="demoReplay" type="button" hidden>Chơi lại bản mô phỏng</button>
+      <a class="btn btn-ghost btn-sm" id="demoLink" href="match.html?demo=1">Mở bản mô phỏng</a>
+    </div>
+  </main>
+
+  <script type="module" src="../shared/app.js"></script>
+</body>
+</html>

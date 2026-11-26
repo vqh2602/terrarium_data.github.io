@@ -1,0 +1,90 @@
+TERRARIUM EVENTS — HỢP ĐỒNG TÍCH HỢP ĐỀ XUẤT v2
+
+Vị trí: folder ngang hàng terrariumidle_ios; không thuộc Xcode project.
+Chạy: cd /Users/vuongquanghuy/code/prj_ios/terrarium-events-web && npm start
+Xem: http://127.0.0.1:8787/ ; tài liệu: /KICH_BAN.html
+Test: npm test (Node có structuredClone, node:test).
+Không cần npm install. HTML/CSS/JS thuần, không có dependency ngoài.
+
+CẤU TRÚC
+index.html: danh mục bản demo
+KICH_BAN.html: kịch bản để duyệt
+5 URL độc lập: events/slot.html, match.html, oxygen.html, level.html, daily.html
+shared/config.js: sản phẩm, luật và các ngưỡng MẪU để hiển thị
+shared/app.js: UI chung
+shared/bridge.js: adapter native; ?demo=1 chỉ bật mock để duyệt
+shared/demo.js: mô phỏng app/backend trong RAM; KHÔNG dùng cấp quà thật
+
+AUTH VÀ NGUỒN DỮ LIỆU
+Web không có form login, không nhận mật khẩu/token Firebase dài hạn.
+Native dùng AuthService.shared.currentUser và phiên auth hiện có để gọi backend.
+Backend xác minh phiên người dùng, cấu hình sự kiện và điều kiện; không tin UID,
+level, oxygen hoặc phần thưởng do web tự gửi.
+Không truyền token trên URL. URL chỉ định sự kiện; eventId phải allowlist theo trang.
+WKScriptMessageHandlerWithReply phải được đăng ký tên terrariumEventV2.
+Native chỉ cho main frame trên HTTPS origin + path sự kiện đã cho phép gọi bridge;
+chặn điều hướng tới origin khác khỏi vùng bridge. Không gắn bridge vào trang tùy ý.
+Request luôn là {version:2, action, payload:{eventId,...}}.
+Đây là giao thức mới; KHÔNG tương thích trực tiếp TerrariumBridge.callHandler hiện tại.
+getContext trả lỗi AUTH_REQUIRED nếu chưa đăng nhập, không trả trạng thái giả.
+
+LỆNH VÀ KẾT QUẢ
+getContext {eventId}: trả snapshot trạng thái sự kiện đã xác thực.
+resolveAssets {eventId,itemIds:["plant20","pot1"]}: trả map
+{plant20:{name:"...",image:"data:image/png;base64,..."},pot1:{...}}.
+App tra ItemDataManager theo ID, dùng image key từ dữ liệu sản phẩm để lấy ảnh,
+xuất thumbnail PNG alpha khoảng 128–256px; không xuất texture các layer SpriteKit.
+ID thiếu: trả tên fallback và image:null, UI hiển thị biểu tượng quà; không crash.
+Có thể thay data URL bằng HTTPS ảnh đã kiểm soát; không trả file:// của sandbox.
+
+spin {eventId,requestId}: backend tiêu lượt và tạo kết quả 3 symbol ID + pending reward.
+startRound {eventId,requestId}: backend tạo 9 ô, trả round.id, attempts, open/revealed.
+revealTile {eventId,roundId,index,requestId}: chỉ trả ô đã mở, không gửi board ẩn.
+claimReward {eventId,milestone,requestId}: nhận mốc oxygen/level; web không gửi quantity.
+claimReward {eventId,rewardId,requestId}: nhận quà đã chốt trong spin/match.
+checkIn {eventId,requestId}: backend xác định ngày, tăng chỉ số lần điểm danh và cấp quà.
+Mỗi lệnh thay đổi trả snapshot mới sau khi lưu thành công; getContext cũng khôi phục
+round, pending rewards và receipt từ backend khi mở lại WebView.
+
+SNAPSHOT MẪU CHO UI HIỆN TẠI
+{oxygenCollected:2400,level:12,spins:3,matchAvailable:true,
+ round:null,claims:[],day:0,checkedToday:false,pending:[],wallet:[]}
+round: {id,open:[0],revealed:{"0":"plant2"},attempts:3,ended:false}
+pending: [{id:"reward-id",rewardId:"plant20",eventId:"slot"}]
+lastSpin: {symbols:["plant20","plant20","plant20"],rewardId:"plant20"}
+claims keys: oxygen-1000 / level-5 / slot-reward-id / match-round-id / daily-0.
+wallet: [{id:"plant20",name:"...",quantity:1}] chỉ quà của event hiện tại.
+Dùng snapshot này làm adapter UI mẫu; production nên trả event revision,
+serverTime, lịch, timezone, quyền action và receipt chính thức cùng cấu hình quà.
+UI mẫu hiện đọc quantity/ngưỡng trong config.js; cần thay bằng cấu hình đã xác thực
+và quantity từ receipt trước phát hành, đặc biệt khi đổi quà trùng.
+
+GIAO DỊCH VÀ ĐỒNG BỘ
+Backend lưu transaction theo UID + eventId + action + requestId; retry trả cùng kết quả.
+Thêm unique claim theo UID/eventId/mốc; check-in theo ngày server; tiêu lượt và
+kết quả quay/lật cùng transaction; cấp quà và đánh dấu đã nhận cùng transaction.
+Validate requestId gắn đúng action/payload, không cho tái sử dụng với payload khác.
+Không dựa riêng vào debounce hoặc trạng thái isClaiming trong WKWebView.
+RNG và bảng ẩn ở backend; web chỉ hiển thị kết quả đã chốt. Cần hỗ trợ concurrent
+requests từ nhiều thiết bị, tái mở app, round dở dang, timeout và reload.
+Backend kiểm tra start/end/phiên bản mỗi lệnh, kể cả nhận quà đang chờ.
+Oxygen collection lấy từ ledger hoạt động hợp lệ trong thời gian event, không lấy
+wallet delta và loại trừ nguồn event reward. Level lấy userLevel authoritative.
+Native cập nhật kho và số dư sau receipt rồi bắn window event terrariumEventUpdated.
+Web khác tải getContext mới khi được mở hoặc nhận sự kiện; không share localStorage.
+Bridge Promise reject Error với message hiển thị; mã chuẩn đề xuất: AUTH_REQUIRED,
+EVENT_ENDED, NOT_ELIGIBLE, ALREADY_CLAIMED, NO_TURNS, NETWORK_RETRY, CONFIG_INVALID.
+
+ĐỐI CHIẾU APP ĐÃ KIỂM TRA
+Apps/Modules/Event/EventWebView.swift đăng ký terrariumEvent chỉ khi event.handler != nil.
+TerrariumEvent.swift hiện ánh xạ 3 link cũ; cần thêm mapping/allowlist cho 5 sự kiện mới.
+EventReward.swift hiện xử lý huy hiệu và lucky wheel; chưa có transaction backend
+hay cơ chế lượt chơi/điểm danh/mốc oxygen tương ứng các đề xuất này.
+Không tái dùng payload code phần thưởng do JS tự chọn cho slot/match mới.
+Lưu Firebase/server code ngoài phạm vi bản mô phỏng này; chưa chỉnh file Swift nào.
+
+KIỂM TRA NGHIỆM THU TÍCH HỢP
+Đăng nhập/đăng xuất khi web đang mở; origin/path/frame bị từ chối; ID asset thiếu;
+2 thiết bị cùng nhận mốc; spam tap; retry cùng requestId sau timeout;
+reload giữ kết quả và round; nhận trùng bị chặn; tiêu oxygen không giảm tiến độ;
+qua 00:00 theo timezone backend; hết hạn; tài khoản đã có cây/chậu; mất mạng giữa claim.

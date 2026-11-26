@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>Terrarium · Trung tâm Sự kiện</title>
+  <link rel="stylesheet" href="shared/style.css">
+</head>
+<body class="page-lobby">
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="brand-dot" aria-hidden="true">🌿</span>
+      <span>TERRARIUM EVENTS</span>
+    </a>
+    <span class="tag">Sảnh sự kiện</span>
+  </header>
+
+  <main class="lobby-main">
+    <section class="lobby-hero">
+      <div class="lobby-hero-copy">
+        <div class="eyebrow">Một khu vườn · Năm trải nghiệm</div>
+        <h1>Ghé vườn mỗi ngày.<br>Mở thêm niềm vui.</h1>
+        <p class="intro">Bộ 5 mini-game sự kiện dành cho Terrarium Idle. Chọn một sự kiện bên dưới để trải nghiệm ngay.</p>
+        <div class="hero-actions">
+          <a class="btn btn-arcade" href="events/slot.html?demo=1">Thử 777 ngay</a>
+          <a class="btn btn-ghost" href="KICH_BAN.html">Tài liệu kịch bản</a>
+        </div>
+      </div>
+      <div class="lobby-hero-art" aria-hidden="true">
+        <svg viewBox="0 0 220 220" class="terrarium-dome">
+          <defs>
+            <radialGradient id="domeGlow" cx="50%" cy="45%" r="50%">
+              <stop offset="0%" stop-color="#cbfa8a" stop-opacity="0.32"/>
+              <stop offset="100%" stop-color="#0b2e24" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="glassTint" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.22"/>
+              <stop offset="55%" stop-color="#7ef2c8" stop-opacity="0.06"/>
+              <stop offset="100%" stop-color="#cbfa8a" stop-opacity="0.16"/>
+            </linearGradient>
+          </defs>
+          <circle cx="110" cy="110" r="98" fill="url(#domeGlow)"/>
+          <path d="M52 152c0-48 24-92 58-92s58 44 58 92z" fill="url(#glassTint)" stroke="#a7e9c7" stroke-opacity="0.55" stroke-width="2.5"/>
+          <ellipse cx="110" cy="154" rx="64" ry="16" fill="#5e3e28" stroke="#996b47" stroke-width="2"/>
+          <ellipse cx="110" cy="149" rx="56" ry="11" fill="#2a593f"/>
+          <path d="M110 146c-4-24-18-38-28-44 12-4 24 6 28 24 4-18 16-28 28-24-10 6-24 20-28 44z" fill="#89e682"/>
+          <path d="M110 146V92" stroke="#cbfa8a" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="94" cy="90" r="4" fill="#ffdc89"/>
+          <circle cx="132" cy="102" r="3" fill="#cbfa8a"/>
+          <circle cx="82" cy="118" r="2.5" fill="#7ef2c8"/>
+          <path d="M72 86c8-12 20-20 34-21" stroke="#ffffff" stroke-opacity="0.45" stroke-width="3" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+    </section>
+
+    <section class="lobby-grid" id="events"></section>
+
+    <details class="tech-drawer">
+      <summary>Thông tin tích hợp app iOS &amp; bản mô phỏng</summary>
+      <p>Trang mô phỏng sử dụng bộ máy game HTML/CSS/JS thuần, chạy với Mock Bridge (<code>?demo=1</code>). Khi mở trong WKWebView của app Terrarium, web tự động gọi bridge <code>terrariumEventV2</code> để đồng bộ trạng thái thật và lấy ảnh sản phẩm từ app.</p>
+    </details>
+  </main>
+
+  <footer class="footer">Terrarium Events · HTML · CSS · JS thuần · Không phụ thuộc ngoài</footer>
+  <script type="module" src="shared/home.js"></script>
+</body>
+</html>
