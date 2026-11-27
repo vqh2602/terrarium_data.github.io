@@ -1757,6 +1757,48 @@ header:not(.game-topbar):not(.topbar) a {
   font-weight: 800;
 }
 
+.wallet-more-btn {
+  margin-left: auto;
+  padding: 5px 12px;
+  font-size: 0.78rem;
+}
+
+.wallet-history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 52vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.wallet-history-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.wallet-history-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  text-align: left;
+}
+
+.wallet-history-name {
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.wallet-history-time {
+  font-size: 0.74rem;
+  color: var(--muted);
+}
+
 .game-footer-actions {
   margin-top: 16px;
   display: flex;

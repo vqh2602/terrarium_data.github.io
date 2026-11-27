@@ -216,6 +216,33 @@ function renderPendingRewards() {
   }
 }
 
+function openWalletModal(items) {
+  const list = el('div', undefined, 'wallet-history-list');
+  const ordered = [...items].reverse();
+  for (const w of ordered) {
+    const row = el('div', undefined, 'wallet-history-row');
+    const qty = w.quantity || catalog[w.id]?.quantity || 1;
+    const name = w.name || assets[w.id]?.name || catalog[w.id]?.name || w.id;
+    const timeText = w.claimedAt || w.time || '';
+
+    const info = el('div', undefined, 'wallet-history-info');
+    info.appendChild(el('div', `${name} × ${qty}`, 'wallet-history-name'));
+    if (timeText) {
+      info.appendChild(el('div', timeText, 'wallet-history-time'));
+    }
+
+    row.append(createItemArt(w.id, assets, { size: 'sm' }), info);
+    list.appendChild(row);
+  }
+
+  showModal({
+    title: `Lịch sử nhận quà (${items.length})`,
+    badge: isDemo ? 'MÔ PHỎNG' : 'KHO QUÀ',
+    bodyNode: list,
+    actions: [{ label: 'Đóng', cls: 'btn btn-primary', onClick: () => { sfx.tap(); closeModals(); } }]
+  });
+}
+
 function renderWallet() {
   const walletEl = $('wallet');
   walletEl.replaceChildren();
@@ -229,22 +256,29 @@ function renderWallet() {
   }
 
   walletEl.classList.add('has-items');
-  const grouped = new Map();
-  for (const w of items) {
-    grouped.set(w.id, (grouped.get(w.id) || 0) + (w.quantity || catalog[w.id]?.quantity || 1));
-  }
+  const recent = [...items].reverse().slice(0, 3);
 
-  walletEl.appendChild(el('span', `Kho quà${isDemo ? ' (mô phỏng)' : ''}:`, 'wallet-title'));
+  walletEl.appendChild(el('span', `Quà gần đây${isDemo ? ' (mô phỏng)' : ''}:`, 'wallet-title'));
   const list = el('div', undefined, 'wallet-chips');
-  for (const [id, total] of grouped.entries()) {
+  for (const w of recent) {
+    const qty = w.quantity || catalog[w.id]?.quantity || 1;
+    const name = w.name || assets[w.id]?.name || catalog[w.id]?.name || w.id;
     const chip = el('div', undefined, 'wallet-chip');
     chip.append(
-      createItemArt(id, assets, { size: 'xs' }),
-      el('span', `${assets[id]?.name || catalog[id]?.name || id} × ${total}`)
+      createItemArt(w.id, assets, { size: 'xs' }),
+      el('span', `${name} × ${qty}`)
     );
     list.appendChild(chip);
   }
   walletEl.appendChild(list);
+
+  const moreBtn = el('button', items.length > 3 ? `Xem thêm (${items.length})` : 'Xem thêm', 'btn btn-ghost btn-sm wallet-more-btn');
+  moreBtn.type = 'button';
+  moreBtn.onclick = () => {
+    sfx.tap();
+    openWalletModal(items);
+  };
+  walletEl.appendChild(moreBtn);
 }
 
 function render() {

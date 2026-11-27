@@ -131,7 +131,7 @@ export function createMatchGame({ root, runAction, getAssets, openClaimModal }) 
   function update(state, assets, busy) {
     if (!built) build();
 
-    const r = state.round;
+    const r = state.matchAvailable ? null : state.round;
     const isNewRound = (r?.id || null) !== prevRoundId;
     prevRoundId = r?.id || null;
     const attempts = r ? r.attempts : state.matchAvailable ? 3 : 0;

@@ -51,10 +51,15 @@ export function createDemo(random = Math.random, options = {}) {
     snap.harvest = buildHarvestState();
     return snap;
   };
+  const nowLabel = () => {
+    const d = new Date();
+    const pad = n => String(n).padStart(2, '0');
+    return `${pad(d.getDate())}/${pad(d.getMonth() + 1)}/${d.getFullYear()} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+  };
   const grant = (id, key, quantityOverride) => {
     if (s.claims.includes(key)) throw Error('Quà đã nhận.');
     s.claims.push(key);
-    const entry = { id, ...catalog[id] };
+    const entry = { id, ...catalog[id], claimedAt: nowLabel() };
     if (quantityOverride !== undefined) entry.quantity = quantityOverride;
     s.wallet.push(entry);
   };
@@ -99,8 +104,9 @@ export function createDemo(random = Math.random, options = {}) {
           const h = buildHarvestState();
           if (!h.isComplete) throw Error('Bạn chưa hoàn thiện đủ kệ vật phẩm.');
           s.claims.push('harvest-complete');
+          const claimedAt = nowLabel();
           for (const r of h.rewards) {
-            s.wallet.push({ id: r.id, ...catalog[r.id], quantity: r.quantity });
+            s.wallet.push({ id: r.id, ...catalog[r.id], quantity: r.quantity, claimedAt });
           }
           break;
         }
