@@ -42,6 +42,16 @@ export const MONTHLY_REWARD_SPECS = {
 };
 
 export const MONTHLY_MILESTONE_DAYS = new Set([7, 14, 21, 28, 30]);
+export const NON_VIP_DISALLOWED_RARITIES = new Set(['rare', 'epic', 'legendary']);
+
+export function isMonthlyRewardAllowed(rarity, isVIP = false) {
+  return Boolean(isVIP) || !NON_VIP_DISALLOWED_RARITIES.has(rarity);
+}
+export const NON_VIP_DISALLOWED_RARITIES = new Set(['rare', 'epic', 'legendary']);
+
+export function isMonthlyRarityAllowed(rarity, isVIP = false) {
+  return Boolean(isVIP) || !NON_VIP_DISALLOWED_RARITIES.has(rarity);
+}
 
 export function currentVietnamMonthKey(date = new Date()) {
   const parts = new Intl.DateTimeFormat('en-CA', {
@@ -80,26 +90,29 @@ function pickWeightedSpec(rand, specsList) {
   return specsList[specsList.length - 1];
 }
 
-export function generateMonthlyRewards(monthKey, seedSalt = '') {
+export function generateMonthlyRewards(monthKey, seedSalt = '', isVIP = false) {
   const rand = createSeededRandom(`${monthKey}:${seedSalt}`);
   const allSpecs = Object.values(MONTHLY_REWARD_SPECS);
-  const milestoneSpecs = [
-    MONTHLY_REWARD_SPECS.shovel,
-    MONTHLY_REWARD_SPECS.gemstone,
-    MONTHLY_REWARD_SPECS.ticket,
-    MONTHLY_REWARD_SPECS.oxygen
-  ];
+  const availableSpecs = isVIP
+    ? allSpecs
+    : allSpecs.filter(spec => isMonthlyRarityAllowed(spec.rarity, false));
+  const milestoneCandidates = new Set(['shovel', 'gemstone', 'ticket', 'oxygen']);
+  const milestoneSpecs = availableSpecs.filter(spec => milestoneCandidates.has(spec.id));
 
   const days = [];
   for (let day = 1; day <= 30; day++) {
     const isMilestone = MONTHLY_MILESTONE_DAYS.has(day);
     let spec;
     if (day === 30) {
-      spec = rand() < 0.55 ? MONTHLY_REWARD_SPECS.ticket : MONTHLY_REWARD_SPECS.gemstone;
+      if (isVIP) {
+        spec = rand() < 0.55 ? MONTHLY_REWARD_SPECS.ticket : MONTHLY_REWARD_SPECS.gemstone;
+      } else {
+        spec = MONTHLY_REWARD_SPECS.oxygen;
+      }
     } else if (isMilestone) {
       spec = pickWeightedSpec(rand, milestoneSpecs);
     } else {
-      spec = pickWeightedSpec(rand, allSpecs);
+      spec = pickWeightedSpec(rand, availableSpecs);
     }
 
     const pool = isMilestone ? spec.milestoneQuantities : spec.quantities;
@@ -113,8 +126,8 @@ export function generateMonthlyRewards(monthKey, seedSalt = '') {
     });
   }
 
-  // Ensure all 5 reward categories appear at least once per month.
-  const requiredIds = ['oxygen', 'fertilizer', 'shovel', 'gemstone', 'ticket'];
+  // Ensure all eligible reward categories appear at least once per month.
+  const requiredIds = availableSpecs.map(s => s.id);
   const present = new Set(days.map(d => d.rewardId));
   const nonMilestoneIndices = days
     .map((d, idx) => (!MONTHLY_MILESTONE_DAYS.has(d.day) ? idx : -1))

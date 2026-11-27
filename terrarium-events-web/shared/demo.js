@@ -1,6 +1,6 @@
 // Chỉ mô phỏng để duyệt kịch bản. Không dùng để xác thực hoặc cấp quà thật.
 import { events, catalog } from './config.js';
-import { currentVietnamMonthKey, generateMonthlyRewards } from './monthlyRewards.js';
+import { currentVietnamMonthKey, generateMonthlyRewards, reconcileMonthlyRewards } from './monthlyRewards.js';
 export function createDemo(random = Math.random, options = {}) {
   const monthKey = options.monthKey || currentVietnamMonthKey();
   const s = {
@@ -17,7 +17,7 @@ export function createDemo(random = Math.random, options = {}) {
     monthlyMonthKey: monthKey,
     monthlyDay: 0,
     monthlyCheckedToday: false,
-    monthlyRewards: generateMonthlyRewards(monthKey, options.seedSalt || 'demo'),
+    monthlyRewards: generateMonthlyRewards(monthKey, options.seedSalt || 'demo', Boolean(options.isVIP)),
     harvestProgress: {},
     demoGardenMature: { plant10: 2, plant2: 2, plant5: 1 },
     pending: [],
@@ -139,6 +139,8 @@ export function createDemo(random = Math.random, options = {}) {
       }
       case 'toggleDemoVIP': {
         s.isVIP = !s.isVIP;
+        const fresh = generateMonthlyRewards(s.monthlyMonthKey, options.seedSalt || 'demo', s.isVIP);
+        s.monthlyRewards = s.monthlyRewards.map((item, idx) => (idx < s.monthlyDay ? item : fresh[idx]));
         break;
       }
       case 'harvestPlant': {

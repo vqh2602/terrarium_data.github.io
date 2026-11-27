@@ -51,3 +51,11 @@ test('monthly generates 30 rewards covering all 5 types and supports VIP x2 chec
  assert.equal((await call('monthlyCheckIn', { eventId: 'monthly', requestId: 'm-1' })).monthlyDay, 1);
  await assert.rejects(call('monthlyCheckIn', { eventId: 'monthly', requestId: 'm-2' }));
 });
+test('non-VIP monthly rewards exclude gemstone, ticket, and shovel', async () => {
+ const call = createDemo(Math.random, { monthKey: '2026-11', isVIP: false });
+ const ctx = await call('getContext', { eventId: 'monthly' });
+ assert.equal(ctx.monthlyRewards.length, 30);
+ for (const r of ctx.monthlyRewards) {
+  assert.equal(['gemstone', 'ticket', 'shovel'].includes(r.rewardId), false, `Unexpected non-VIP reward ${r.rewardId}`);
+ }
+});
