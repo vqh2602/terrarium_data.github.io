@@ -66,6 +66,22 @@ export const events = {
     rule: 'Mỗi tháng (Asia/Ho_Chi_Minh) hệ thống tạo ngẫu nhiên bảng 30 phần thưởng theo độ quý hiếm: Oxygen (Thường), Phân bón (Ít gặp), Xẻng (Hiếm), Đá quý (Sử thi), Vé (Huyền thoại). Sang tháng mới tự động làm mới toàn bộ 30 ngày. Thành viên VIP nhận ×2 số lượng mỗi ngày!',
     rewardIds: ['oxygen', 'fertilizer', 'shovel', 'gemstone', 'ticket'],
     rewardQuantities: { oxygen: 300, fertilizer: 1, shovel: 1, gemstone: 10, ticket: 1 }
+  },
+  harvest: {
+    title: 'Thu hoạch khu vườn',
+    subtitle: 'Cắt cây trưởng thành lên kệ',
+    badge: 'Kệ thu hoạch',
+    theme: 'emerald',
+    icon: '🌾',
+    description: 'Thu hoạch cây trưởng thành (Lv.3+) trong khu vườn để hoàn thiện kệ vật phẩm và nhận trọn bộ phần thưởng.',
+    rule: 'Mỗi lần đặt 1 cây lên kệ, hệ thống sẽ cắt 1 cây trưởng thành (Lv.3+) cùng loại trong khu vườn của bạn về lại Lv.1. Bạn có thể tiếp tục chăm cây lớn lên để thu hoạch tiếp. Hoàn thiện tất cả ô trên kệ để nhận thưởng!',
+    rewardIds: ['plant20', 'gemstone', 'oxygen'],
+    rewardQuantities: { plant20: 1, gemstone: 50, oxygen: 1000 },
+    requirements: [
+      { plantId: 'plant10', required: 3 },
+      { plantId: 'plant2', required: 2 },
+      { plantId: 'plant5', required: 2 }
+    ]
   }
 };
 
@@ -102,6 +118,14 @@ export const catalog = {
     quantity: 1,
     rarity: 'rare'
   },
+  plant10: {
+    name: 'Monstera',
+    subname: 'Trầu bà lá xẻ',
+    icon: '🌿',
+    localImage: 'assets/items/plant2.png',
+    quantity: 1,
+    rarity: 'rare'
+  },
   plant8: {
     name: 'Schefflera',
     subname: 'Ngũ gia bì',
@@ -109,6 +133,14 @@ export const catalog = {
     localImage: 'assets/items/plant2.png',
     quantity: 1,
     rarity: 'rare'
+  },
+  plant5: {
+    name: 'Calathea',
+    subname: 'Cẩm nhung',
+    icon: '🌱',
+    localImage: 'assets/items/plant2.png',
+    quantity: 1,
+    rarity: 'uncommon'
   },
   plant2: {
     name: 'Aloe Vera',

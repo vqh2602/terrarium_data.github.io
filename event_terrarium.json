@@ -146,6 +146,27 @@
             "create": "2026-11-26",
             "version": "1.0.0",
             "link": "https://vqh2602.github.io/terrarium_data.github.io/terrarium-events-web/events/monthly.html"
+        },
+        {
+            "eventdata": [
+                {
+                    "local": "en",
+                    "description": "Harvest mature plants (Lv.3+) from your garden to complete the shelf and claim all rewards.",
+                    "title": "Garden Harvest",
+                    "image": "https://iili.io/oqkEeGn.png"
+                },
+                {
+                    "local": "vi",
+                    "description": "Thu hoạch cây trưởng thành (Lv.3+) trong khu vườn lên kệ vật phẩm để nhận trọn bộ quà.",
+                    "title": "Thu hoạch khu vườn",
+                    "image": "https://iili.io/oqkEeGn.png"
+                }
+            ],
+            "start": "2026-11-26",
+            "end": "2027-12-31",
+            "create": "2026-11-27",
+            "version": "1.0.0",
+            "link": "https://vqh2602.github.io/terrarium_data.github.io/terrarium-events-web/events/harvest.html"
         }
     ]
 }

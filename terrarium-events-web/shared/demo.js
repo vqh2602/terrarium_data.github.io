@@ -18,11 +18,39 @@ export function createDemo(random = Math.random, options = {}) {
     monthlyDay: 0,
     monthlyCheckedToday: false,
     monthlyRewards: generateMonthlyRewards(monthKey, options.seedSalt || 'demo'),
+    harvestProgress: {},
+    demoGardenMature: { plant10: 2, plant2: 2, plant5: 1 },
     pending: [],
     wallet: []
   };
   const receipts = new Map();
-  const snapshot = () => structuredClone(s);
+  const buildHarvestState = () => {
+    const reqs = events.harvest.requirements.map(req => {
+      const collected = Math.min(req.required, s.harvestProgress[req.plantId] || 0);
+      return {
+        plantId: req.plantId,
+        required: req.required,
+        collected,
+        remaining: Math.max(0, req.required - collected),
+        matureInGarden: s.demoGardenMature[req.plantId] || 0
+      };
+    });
+    return {
+      requirements: reqs,
+      maturePlants: { ...s.demoGardenMature },
+      isComplete: reqs.every(r => r.collected >= r.required),
+      claimed: s.claims.includes('harvest-complete'),
+      rewards: events.harvest.rewardIds.map(id => ({
+        id,
+        quantity: events.harvest.rewardQuantities?.[id] ?? 1
+      }))
+    };
+  };
+  const snapshot = () => {
+    const snap = structuredClone(s);
+    snap.harvest = buildHarvestState();
+    return snap;
+  };
   const grant = (id, key, quantityOverride) => {
     if (s.claims.includes(key)) throw Error('Quà đã nhận.');
     s.claims.push(key);
@@ -66,6 +94,16 @@ export function createDemo(random = Math.random, options = {}) {
       }
       case 'claimReward': {
         if (!event) throw Error('Sự kiện không hợp lệ.');
+        if (payload.eventId === 'harvest') {
+          if (s.claims.includes('harvest-complete')) throw Error('Quà đã nhận.');
+          const h = buildHarvestState();
+          if (!h.isComplete) throw Error('Bạn chưa hoàn thiện đủ kệ vật phẩm.');
+          s.claims.push('harvest-complete');
+          for (const r of h.rewards) {
+            s.wallet.push({ id: r.id, ...catalog[r.id], quantity: r.quantity });
+          }
+          break;
+        }
         if (event.milestones) {
           const i = event.milestones.indexOf(payload.milestone), progress = payload.eventId === 'oxygen' ? s.oxygenCollected : s.level;
           if (i < 0 || progress < payload.milestone) throw Error('Chưa đạt mốc.');
@@ -95,6 +133,18 @@ export function createDemo(random = Math.random, options = {}) {
       }
       case 'toggleDemoVIP': {
         s.isVIP = !s.isVIP;
+        break;
+      }
+      case 'harvestPlant': {
+        const plantId = payload.plantId;
+        const req = events.harvest.requirements.find(r => r.plantId === plantId);
+        if (!req) throw Error('Cây không nằm trong danh sách thu hoạch.');
+        const collected = s.harvestProgress[plantId] || 0;
+        if (collected >= req.required) throw Error('Kệ vật phẩm cho cây này đã đủ số lượng.');
+        const mature = s.demoGardenMature[plantId] || 0;
+        if (mature <= 0) throw Error('Bạn chưa có cây trưởng thành phù hợp trong khu vườn.');
+        s.demoGardenMature[plantId] = mature - 1;
+        s.harvestProgress[plantId] = collected + 1;
         break;
       }
       default: throw Error('Lệnh chưa hỗ trợ.');

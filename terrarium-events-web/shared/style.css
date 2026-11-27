@@ -2098,6 +2098,150 @@ header:not(.game-topbar):not(.topbar) a {
   color: var(--mint);
 }
 
+/* Harvest Event */
+.harvest-stage {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.harvest-header {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 14px 16px;
+}
+
+.harvest-title {
+  margin: 0 0 4px;
+  font-size: 1.05rem;
+}
+
+.harvest-desc {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.harvest-shelf {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
+  gap: 10px;
+}
+
+.harvest-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 10px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: center;
+}
+
+.harvest-slot.is-ready {
+  border-color: rgba(103, 232, 194, 0.5);
+  background: rgba(103, 232, 194, 0.08);
+}
+
+.harvest-slot.is-done {
+  border-color: rgba(203, 250, 138, 0.45);
+  background: rgba(203, 250, 138, 0.08);
+}
+
+.harvest-slot-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+.harvest-slot-badge {
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.harvest-slot.is-done .harvest-slot-badge {
+  background: rgba(103, 232, 194, 0.22);
+  color: var(--mint);
+}
+
+.harvest-slot-name {
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.harvest-slot-garden {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.harvest-slot-btn {
+  width: 100%;
+  margin-top: auto;
+}
+
+.harvest-reward-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.harvest-reward-box.is-complete {
+  border-color: rgba(255, 220, 137, 0.65);
+  background: rgba(255, 220, 137, 0.1);
+}
+
+.harvest-reward-title {
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.harvest-reward-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.harvest-reward-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.harvest-confirm-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.harvest-confirm-lead {
+  margin: 0;
+  font-weight: 700;
+}
+
+.harvest-confirm-meta {
+  margin: 0;
+  font-size: 0.82rem;
+  opacity: 0.8;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.001ms !important;

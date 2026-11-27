@@ -9,6 +9,7 @@ import { createOxygenGame } from './games/oxygen.js';
 import { createLevelGame } from './games/level.js';
 import { createDailyGame } from './games/daily.js';
 import { createMonthlyGame } from './games/monthly.js';
+import { createHarvestGame } from './games/harvest.js';
 
 const rootEl = document.querySelector('[data-event]');
 const eventId = rootEl.dataset.event;
@@ -177,6 +178,7 @@ function ensureGameController() {
     case 'level': gameController = createLevelGame(ctx); break;
     case 'daily': gameController = createDailyGame(ctx); break;
     case 'monthly': gameController = createMonthlyGame(ctx); break;
+    case 'harvest': gameController = createHarvestGame(ctx); break;
   }
   return gameController;
 }
@@ -280,7 +282,18 @@ async function load() {
   if ($('refresh')) $('refresh').disabled = true;
   try {
     state = await call('getContext', { eventId });
-    assets = await call('resolveAssets', { eventId, itemIds: [...new Set(event.rewardIds)] });
+    const nativeSpecs = state?.eventSpecs?.[eventId];
+    if (Array.isArray(nativeSpecs) && nativeSpecs.length) {
+      event.rewardIds = nativeSpecs.map(x => x.id);
+      event.rewardQuantities = Object.fromEntries(nativeSpecs.map(x => [x.id, x.quantity]));
+      const milestones = nativeSpecs.map(x => x.milestone).filter(x => x !== undefined && x !== null);
+      if (milestones.length) event.milestones = milestones;
+    }
+    const extraIds = [
+      ...(state?.harvest?.requirements?.map(r => r.plantId) || []),
+      ...(state?.harvest?.rewards?.map(r => r.id) || [])
+    ];
+    assets = await call('resolveAssets', { eventId, itemIds: [...new Set([...event.rewardIds, ...extraIds])] });
     setNotice(isDemo ? 'Sẵn sàng trải nghiệm mô phỏng' : 'Đã đồng bộ với app', 'info');
   } catch (error) {
     setNotice(error.message, 'error');
