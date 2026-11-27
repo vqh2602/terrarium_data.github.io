@@ -145,3 +145,16 @@ export function generateMonthlyRewards(monthKey, seedSalt = '', isVIP = false) {
 
   return days;
 }
+
+export function reconcileMonthlyRewards(existing, monthKey, seedSalt = '', currentDay = 0, isVIP = false) {
+  const fresh = generateMonthlyRewards(monthKey, seedSalt, isVIP);
+  if (!Array.isArray(existing) || existing.length !== 30) return fresh;
+  return existing.map((current, idx) => {
+    const dayNum = current?.day || idx + 1;
+    if (dayNum <= currentDay) return current;
+    if (!isVIP) {
+      return isMonthlyRarityAllowed(current?.rarity || 'common', false) ? current : fresh[idx];
+    }
+    return fresh[idx];
+  });
+}
