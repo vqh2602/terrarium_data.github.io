@@ -62,8 +62,8 @@ export function itemDisplayName(id, assets = {}) {
   return assets[id]?.name || catalog[id]?.name || String(id || 'Quà bí ẩn');
 }
 
-export function itemLabel(id, assets = {}) {
-  const qty = catalog[id]?.quantity || 1;
+export function itemLabel(id, assets = {}, quantityOverride = null) {
+  const qty = quantityOverride ?? catalog[id]?.quantity ?? 1;
   return `${itemDisplayName(id, assets)} × ${qty}`;
 }
 

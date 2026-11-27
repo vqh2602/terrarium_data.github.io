@@ -12,10 +12,10 @@ test('spin retries are idempotent and no more than three turns', async () => {
 });
 test('milestones reject unmet and duplicate claims', async () => {
  const call = createDemo();
- await assert.rejects(call('claimReward', {eventId:'oxygen',milestone:5000}));
- const s = await call('claimReward', {eventId:'oxygen',milestone:1000}); assert.equal(s.wallet.length,1);
- await assert.rejects(call('claimReward', {eventId:'oxygen',milestone:1000}));
- await assert.rejects(call('claimReward', {eventId:'level',milestone:20}));
+ await assert.rejects(call('claimReward', {eventId:'oxygen',milestone:10000}));
+ await assert.rejects(call('claimReward', {eventId:'level',milestone:50}));
+ const s = await call('claimReward', {eventId:'level',milestone:5}); assert.equal(s.wallet.length,1);
+ await assert.rejects(call('claimReward', {eventId:'level',milestone:5}));
 });
 test('daily is limited to once per day', async () => {
  const call = createDemo(); const s = await call('checkIn'); assert.equal(s.day,1);

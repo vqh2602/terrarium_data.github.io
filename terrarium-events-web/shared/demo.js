@@ -69,17 +69,19 @@ export function createDemo(random = Math.random, options = {}) {
         if (event.milestones) {
           const i = event.milestones.indexOf(payload.milestone), progress = payload.eventId === 'oxygen' ? s.oxygenCollected : s.level;
           if (i < 0 || progress < payload.milestone) throw Error('Chưa đạt mốc.');
-          grant(event.rewardIds[i], `${payload.eventId}-${payload.milestone}`);
+          const rewardId = event.rewardIds[i];
+          grant(rewardId, `${payload.eventId}-${payload.milestone}`, event.rewardQuantities?.[rewardId]);
         } else {
           const reward = s.pending.find(x => x.id === payload.rewardId && x.eventId === payload.eventId);
           if (!reward) throw Error('Không tìm thấy quà.');
-          grant(reward.rewardId, `${payload.eventId}-${reward.id}`);
+          grant(reward.rewardId, `${payload.eventId}-${reward.id}`, event.rewardQuantities?.[reward.rewardId]);
           s.pending = s.pending.filter(x => x !== reward);
         } break;
       }
       case 'checkIn': {
         if (s.checkedToday || s.day >= 7) throw Error('Bạn đã điểm danh hôm nay hoặc hoàn thành chuỗi.');
-        grant(events.daily.rewardIds[s.day], `daily-${s.day}`); s.day++; s.checkedToday = true; break;
+        const rewardId = events.daily.rewardIds[s.day];
+        grant(rewardId, `daily-${s.day}`, events.daily.rewardQuantities?.[rewardId]); s.day++; s.checkedToday = true; break;
       }
       case 'monthlyCheckIn': {
         if (s.monthlyCheckedToday || s.monthlyDay >= 30) throw Error('Bạn đã điểm danh hôm nay hoặc hoàn thành đủ 30 ngày tháng này.');

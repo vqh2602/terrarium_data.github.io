@@ -124,7 +124,7 @@ function openClaimModal(reward) {
   stage.append(rays, art);
   body.append(
     stage,
-    el('div', itemLabel(reward.rewardId, assets), 'reward-modal-name')
+    el('div', itemLabel(reward.rewardId, assets, reward.quantity ?? event.rewardQuantities?.[reward.rewardId]), 'reward-modal-name')
   );
 
   showModal({
@@ -191,7 +191,7 @@ function renderPendingRewards() {
     const info = el('div', undefined, 'pending-info');
     info.append(
       el('span', 'Quà đang chờ nhận', 'pending-eyebrow'),
-      el('strong', itemLabel(reward.rewardId, assets), 'pending-name')
+      el('strong', itemLabel(reward.rewardId, assets, reward.quantity ?? event.rewardQuantities?.[reward.rewardId]), 'pending-name')
     );
     const btn = el('button', 'Nhận vào kho', 'btn btn-arcade pending-btn');
     btn.type = 'button';

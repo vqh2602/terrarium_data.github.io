@@ -156,7 +156,7 @@ export function createMatchGame({ root, runAction, getAssets, openClaimModal }) 
         const won = r.open.length === 2 && r.revealed[r.open[0]] && r.revealed[r.open[0]] === r.revealed[r.open[1]];
         els.statusPill.textContent = won ? 'Tìm thấy cặp quà!' : 'Hết lượt thử';
         els.hint.textContent = won
-          ? `Tuyệt vời! Bạn đã ghép được cặp ${itemLabel(r.revealed[r.open[0]], assets)}.`
+          ? `Tuyệt vời! Bạn đã ghép được cặp ${itemLabel(r.revealed[r.open[0]], assets, events.match.rewardQuantities?.[r.revealed[r.open[0]]])}.`
           : 'Đã dùng hết 3 lần thử cặp. Hẹn bạn ngày mai nhé!';
       } else if (r.open.length === 1) {
         els.statusPill.textContent = `Còn ${r.attempts} cặp thử`;
@@ -188,7 +188,7 @@ export function createMatchGame({ root, runAction, getAssets, openClaimModal }) 
       card.disabled = busy || !r || r.ended || open;
       card.setAttribute(
         'aria-label',
-        open ? `Ô ${i + 1}: ${val ? itemLabel(val, assets) : 'lá trống'}` : `Lật ô ${i + 1}`
+        open ? `Ô ${i + 1}: ${val ? itemLabel(val, assets, events.match.rewardQuantities?.[val]) : 'lá trống'}` : `Lật ô ${i + 1}`
       );
 
       if (open) {

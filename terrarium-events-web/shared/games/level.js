@@ -8,8 +8,8 @@ export function createLevelGame({ root, runAction, getAssets, getWalletEl }) {
   let els = {};
 
   function gardenerRank(lv) {
-    if (lv >= 20) return 'Bậc Thầy Hệ Sinh Thái';
-    if (lv >= 10) return 'Nghệ Nhân Terrarium';
+    if (lv >= 50) return 'Bậc Thầy Hệ Sinh Thái';
+    if (lv >= 15) return 'Nghệ Nhân Terrarium';
     if (lv >= 5) return 'Người Chăm Vườn';
     return 'Mầm Non Mới Nhú';
   }
@@ -128,7 +128,7 @@ export function createLevelGame({ root, runAction, getAssets, getWalletEl }) {
 
       item.node.textContent = claimed ? '✓' : `Lv.${item.milestone}`;
       item.artHolder.replaceChildren(createItemArt(item.rewardId, assets, { size: 'md' }));
-      item.rewardName.textContent = itemLabel(item.rewardId, assets);
+      item.rewardName.textContent = itemLabel(item.rewardId, assets, events.level.rewardQuantities?.[item.rewardId]);
 
       if (claimed) {
         item.sub.textContent = 'Đã nhận phần thưởng cấp độ';

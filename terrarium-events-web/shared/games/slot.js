@@ -106,7 +106,7 @@ export function createSlotGame({ root, runAction, getAssets, openClaimModal }) {
     const legendList = el('div', undefined, 'legend-items');
     for (const id of events.slot.rewardIds) {
       const chip = el('div', undefined, 'legend-chip');
-      chip.append(createItemArt(id, assets, { size: 'xs' }), el('span', `3× ${itemLabel(id, assets)}`));
+      chip.append(createItemArt(id, assets, { size: 'xs' }), el('span', `3× ${itemLabel(id, assets, events.slot.rewardQuantities?.[id])}`));
       legendList.appendChild(chip);
     }
     legend.appendChild(legendList);
@@ -181,7 +181,7 @@ export function createSlotGame({ root, runAction, getAssets, openClaimModal }) {
         els.banner.textContent = spins > 0 ? 'Chạm nút hoặc kéo cần để quay!' : 'Hẹn bạn quay lại vào ngày mai!';
         els.banner.className = 'slot-banner';
       } else if (won) {
-        els.banner.textContent = `Trúng lớn! ${itemLabel(state.lastSpin.rewardId, assets)}`;
+        els.banner.textContent = `Trúng lớn! ${itemLabel(state.lastSpin.rewardId, assets, events.slot.rewardQuantities?.[state.lastSpin.rewardId])}`;
         els.banner.className = 'slot-banner is-win';
       } else {
         els.banner.textContent = spins > 0 ? 'Suýt trúng rồi! Thử lại lượt tiếp nhé' : 'Chưa trúng lần này. Hẹn bạn ngày mai!';

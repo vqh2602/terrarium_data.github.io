@@ -139,7 +139,7 @@ export function createOxygenGame({ root, runAction, getAssets, getWalletEl }) {
 
       item.node.textContent = claimed ? '✓' : ready ? '★' : '🔒';
       item.artHolder.replaceChildren(createItemArt(item.rewardId, assets, { size: 'md' }));
-      item.rewardName.textContent = itemLabel(item.rewardId, assets);
+      item.rewardName.textContent = itemLabel(item.rewardId, assets, events.oxygen.rewardQuantities?.[item.rewardId]);
 
       if (claimed) {
         item.sub.textContent = 'Đã lưu vào kho của bạn';

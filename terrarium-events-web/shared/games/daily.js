@@ -121,7 +121,7 @@ export function createDailyGame({ root, runAction, getAssets, getWalletEl }) {
 
       item.tag.textContent = done ? 'Xong' : today ? 'HÔM NAY' : 'Sắp tới';
       item.artWrap.replaceChildren(createItemArt(item.rewardId, assets, { size: i === 6 ? 'lg' : 'md' }));
-      item.nameEl.textContent = itemLabel(item.rewardId, assets);
+      item.nameEl.textContent = itemLabel(item.rewardId, assets, events.daily.rewardQuantities?.[item.rewardId]);
     });
 
     const canClaim = !checkedToday && day < 7;
