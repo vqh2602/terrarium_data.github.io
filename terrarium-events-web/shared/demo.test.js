@@ -55,6 +55,15 @@ test('non-VIP monthly rewards exclude gemstone, ticket, and shovel', async () =>
  const call = createDemo(Math.random, { monthKey: '2026-11', isVIP: false });
  const ctx = await call('getContext', { eventId: 'monthly' });
  assert.equal(ctx.monthlyRewards.length, 30);
+ const disallowed = new Set(['gemstone', 'ticket', 'shovel']);
+ for (const r of ctx.monthlyRewards) {
+  assert.equal(disallowed.has(r.rewardId), false, `Unexpected non-VIP reward: ${r.rewardId}`);
+ }
+});
+test('non-VIP monthly rewards exclude gemstone, ticket, and shovel', async () => {
+ const call = createDemo(Math.random, { monthKey: '2026-11', isVIP: false });
+ const ctx = await call('getContext', { eventId: 'monthly' });
+ assert.equal(ctx.monthlyRewards.length, 30);
  for (const r of ctx.monthlyRewards) {
   assert.equal(['gemstone', 'ticket', 'shovel'].includes(r.rewardId), false, `Unexpected non-VIP reward ${r.rewardId}`);
  }

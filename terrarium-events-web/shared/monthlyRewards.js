@@ -44,11 +44,6 @@ export const MONTHLY_REWARD_SPECS = {
 export const MONTHLY_MILESTONE_DAYS = new Set([7, 14, 21, 28, 30]);
 export const NON_VIP_DISALLOWED_RARITIES = new Set(['rare', 'epic', 'legendary']);
 
-export function isMonthlyRewardAllowed(rarity, isVIP = false) {
-  return Boolean(isVIP) || !NON_VIP_DISALLOWED_RARITIES.has(rarity);
-}
-export const NON_VIP_DISALLOWED_RARITIES = new Set(['rare', 'epic', 'legendary']);
-
 export function isMonthlyRarityAllowed(rarity, isVIP = false) {
   return Boolean(isVIP) || !NON_VIP_DISALLOWED_RARITIES.has(rarity);
 }
