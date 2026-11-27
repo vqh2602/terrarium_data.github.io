@@ -1,0 +1,121 @@
+{
+  "data": [
+    {
+      "id": "mail-2026-11-events-v2",
+      "category": "event",
+      "date": "2026-11-27",
+      "sender": "Ban quản trị Terrarium",
+      "pinned": true,
+      "minVersion": "1.0.0",
+      "action": {
+        "type": "route",
+        "target": "events"
+      },
+      "content": [
+        {
+          "local": "vi",
+          "title": "Chuỗi sự kiện mới đã mở cửa!",
+          "summary": "Tham gia Điểm danh 30 ngày, Vòng quay may mắn và tích lũy Oxy để nhận cây hiếm & chậu mới.",
+          "body": "Xin chào các nhà làm vườn!\n\nChuỗi sự kiện mới đã chính thức ra mắt trong mục Góc vườn → Sự kiện. Hoàn thành các mốc tích lũy và điểm danh mỗi ngày để nhận thêm Oxy, Phân bón, Xẻng cùng nhiều loại cây đặc biệt.",
+          "highlights": [
+            "Điểm danh 30 ngày hàng tháng — Thành viên VIP được nhân đôi (×2) toàn bộ quà.",
+            "Sự kiện Tích lũy Oxygen & Thăng cấp nhận cây và chậu giới hạn.",
+            "Mini-game Slot & Lật thẻ mở lượt chơi mới mỗi ngày lúc 00:00 (GMT+7)."
+          ],
+          "image": "",
+          "actionLabel": "Mở Sự kiện ngay →"
+        },
+        {
+          "local": "en",
+          "title": "New Event Series Is Live!",
+          "summary": "Join the 30-Day Check-In, Lucky Spin, and Oxygen Milestones to earn rare plants & pots.",
+          "body": "Hello gardeners!\n\nA brand-new event series is now live under Garden Corner → Events. Complete daily check-ins and milestones to collect Oxygen, Fertilizer, Shovels, and exclusive plants.",
+          "highlights": [
+            "Monthly 30-day Check-In — Terrarium VIP members automatically receive double (×2) rewards.",
+            "Oxygen & Level milestone events with exclusive plant and pot rewards.",
+            "Slot & Memory Match mini-games refresh daily at 00:00 (GMT+7)."
+          ],
+          "image": "",
+          "actionLabel": "Open Events →"
+        }
+      ]
+    },
+    {
+      "id": "mail-2026-11-update-garden",
+      "category": "update",
+      "date": "2026-11-25",
+      "sender": "Đội ngũ phát triển",
+      "pinned": false,
+      "minVersion": "1.0.0",
+      "action": {
+        "type": "route",
+        "target": "store"
+      },
+      "content": [
+        {
+          "local": "vi",
+          "title": "Cập nhật tối ưu hiệu ứng & cây mới",
+          "summary": "Cải thiện chuyển động chạm lá mượt hơn, bổ sung Hòm thư và tối ưu hiệu năng khu vườn.",
+          "body": "Bản cập nhật lần này tập trung vào trải nghiệm mượt mà hơn khi bạn chăm sóc nhiều chậu cây cùng lúc, đồng thời ra mắt Hòm thư để bạn không bỏ lỡ bất kỳ thông báo nào từ Admin.",
+          "highlights": [
+            "Ra mắt Hòm thư trong Góc vườn để cập nhật tin tức, sự kiện và thay đổi mới.",
+            "Cải thiện hiệu ứng gió lay và tương tác chạm lá ổn định hơn.",
+            "Tối ưu bộ nhớ hiển thị cho các chậu cây trên kệ."
+          ],
+          "image": "",
+          "actionLabel": "Ghé Cửa hàng →"
+        },
+        {
+          "local": "en",
+          "title": "Garden Polish & New Mailbox Update",
+          "summary": "Smoother leaf tap animations, brand-new Mailbox, and better shelf performance.",
+          "body": "This update brings smoother animations when tending multiple pots at once and introduces the Garden Mailbox so you never miss announcements or changelogs from the team.",
+          "highlights": [
+            "Added Mailbox in Garden Corner for admin news, events, and patch notes.",
+            "Improved wind sway and tap interaction stability.",
+            "Optimized memory usage for shelf pots."
+          ],
+          "image": "",
+          "actionLabel": "Visit Store →"
+        }
+      ]
+    },
+    {
+      "id": "mail-2026-11-welcome-system",
+      "category": "system",
+      "date": "2026-11-20",
+      "sender": "Admin Terrarium",
+      "pinned": false,
+      "action": {
+        "type": "route",
+        "target": "vip"
+      },
+      "content": [
+        {
+          "local": "vi",
+          "title": "Chào mừng đến với Hòm thư Khu vườn",
+          "summary": "Nơi cập nhật thông báo bảo trì, sự kiện sắp tới và ghi chú phiên bản từ Admin.",
+          "body": "Hòm thư sẽ là kênh thông tin chính thức giúp bạn theo dõi nhanh các sự kiện đang diễn ra, lịch cập nhật tính năng mới và các lưu ý quan trọng cho khu vườn của mình.\n\nChúc bạn có những phút giây thư giãn thật bình yên!",
+          "highlights": [
+            "Kéo xuống để làm mới danh sách thư bất cứ lúc nào.",
+            "Thư chưa đọc sẽ hiển thị chấm cam ở góc biểu tượng Góc vườn."
+          ],
+          "image": "",
+          "actionLabel": "Khám phá Gói VIP →"
+        },
+        {
+          "local": "en",
+          "title": "Welcome to the Garden Mailbox",
+          "summary": "Your hub for upcoming events, maintenance notices, and patch notes from Admin.",
+          "body": "The Mailbox is the official place to keep up with ongoing events, upcoming feature releases, and important tips for your garden.\n\nWishing you peaceful and relaxing moments!",
+          "highlights": [
+            "Pull down anytime to refresh messages.",
+            "Unread messages show an indicator dot on the Garden Corner button."
+          ],
+          "image": "",
+          "actionLabel": "Explore VIP →"
+        }
+      ]
+    }
+  ]
+}
