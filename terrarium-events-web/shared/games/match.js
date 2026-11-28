@@ -1,3 +1,4 @@
+import { events } from '../config.js';
 import { el, createItemArt, itemDisplayName, itemLabel, svgIcon } from '../ui.js';
 import { fx } from '../fx.js';
 import { sfx } from '../sfx.js';

@@ -236,8 +236,11 @@ a.button {
 /* Item Artwork & Rarity Auras */
 .item-art {
   position: relative;
-  display: inline-grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11%;
+  overflow: hidden;
   border-radius: 16px;
   background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.04));
   border: 1px solid rgba(255, 255, 255, 0.16);
@@ -246,8 +249,13 @@ a.button {
 
 .item-art img,
 .item-art .svg-art {
-  width: 78%;
-  height: 78%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 0;
+  min-height: 0;
   object-fit: contain;
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.28));
 }
@@ -821,8 +829,10 @@ header:not(.game-topbar):not(.topbar) a {
 
 .slot-cell {
   height: 112px;
-  display: grid;
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .slot-cell .item-art {
